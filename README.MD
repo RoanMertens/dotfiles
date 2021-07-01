@@ -4,8 +4,14 @@ Install homebrew
 Install git & curl
 -
 
-Brew install Node/NPM, Yarn
+Install Node/NPM, Yarn
+- brew install node
 - npm install --global yarn
+
+Install Rbenv
+- brew install rbenv
+- rbenv init
+- rbenv install 2.7.3
 
 Install Neovim extension for NPM/Yarn
 - yarn global add neovim
@@ -19,6 +25,10 @@ Install Shezmoi
 
 Initialize Shezmoi dotfiles
 - chezmoi init https://github.com/roanmertens/chezmoi_dotfiles.git
+
+Add zsh-autosuggestions and zsh-syntax-highlighting
+- git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+- git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 Install NeoVim
 1. Install Plug.Vim
