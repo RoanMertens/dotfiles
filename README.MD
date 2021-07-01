@@ -1,3 +1,15 @@
+Install homebrew
+-
+
+Install git & curl
+-
+
+Brew install Node/NPM, Yarn
+- npm install --global yarn
+
+Install Neovim extension for NPM/Yarn
+- yarn global add neovim
+
 Connect to Github
 Generate new or copy existing SSH key and link it to Github account.
 
@@ -6,7 +18,7 @@ Install Shezmoi
 - with Homebrew (brew install chezmoi)
 
 Initialize Shezmoi dotfiles
-
+- chezmoi init https://github.com/roanmertens/chezmoi_dotfiles.git
 
 Install NeoVim
 1. Install Plug.Vim
