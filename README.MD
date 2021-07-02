@@ -32,7 +32,7 @@ Install Shezmoi
 - with Homebrew (brew install chezmoi)
 
 Initialize Shezmoi dotfiles
-- chezmoi init https://github.com/roanmertens/chezmoi_dotfiles.git
+- chezmoi init https://github.com/roanmertens/dotfiles.git
 
 Install latest or specific Node Version.
 - nvm install node
