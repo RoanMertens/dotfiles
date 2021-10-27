@@ -1,0 +1,3165 @@
+: 1609062985:0;ls
+: 1588188428:0;vim ~/.zshrc
+: 1609062985:0;xcode-select --install
+: 1609062985:0;xcode-select --install
+: 1609062985:0;softwareupdate --list
+: 1609062985:0;/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+: 1609062985:0;brew update
+: 1609062985:0;function install_or_upgrade { brew ls | grep $1 > /dev/null; if (($? == 0)); then brew upgrade $1; else brew install $1; fi }\
+install_or_upgrade "git"\
+install_or_upgrade "wget"\
+install_or_upgrade "imagemagick"\
+install_or_upgrade "jq"\
+install_or_upgrade "openssl"
+: 1609062985:0;brew update
+: 1609062985:0;brew cask upgrade
+: 1609062985:0;sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+: 1588188721:0;upgrade_oh_my_zsh
+: 1588188727:0;ls
+: 1588188888:0;mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C "roanmertens91@gmail.com"
+: 1588189379:0;cat ~/.ssh/id_ed25519.pub
+: 1588189490:0;ls
+: 1588189495:0;ls -a
+: 1588189499:0;rm -rf .ssh
+: 1588189500:0;ls
+: 1588189510:0;mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C "roanmertens91@gmail.com"
+: 1588189660:0;cat ~/.ssh/id_ed25519.pub
+: 1588189926:0;ssh -T git@github.com
+: 1588190561:0;export GITHUB_USERNAME=roanmertens
+: 1588190585:0;ls
+: 1588190602:0;mkdir -p ~/code/$GITHUB_USERNAME && cd $_ && git clone git@github.com:$GITHUB_USERNAME/dotfiles.git
+: 1588190650:0;cd ~/code/$GITHUB_USERNAME/dotfiles\
+zsh install.sh
+: 1588190741:0;cd
+: 1588190744:0;ls
+: 1588190750:0;vim .zshrc
+: 1588190780:0;cd ~/code/$GITHUB_USERNAME/dotfiles\
+zsh install.sh
+: 1588190866:0;source .zshrc
+: 1588190868:0;cd
+: 1588190869:0;source .zshrc
+: 1588190871:0;ls
+: 1588190892:0;cd ~/code/$GITHUB_USERNAME/dotfiles\
+zsh git_setup.sh
+: 1588190980:0;stt
+: 1588190982:0;cd
+: 1588190983:0;stt
+: 1588191093:0;sw_vers
+: 1588191120:0;vim ~/.ssh/config
+: 1588191140:0;ls
+: 1588191147:0;touch config
+: 1588191152:0;vim config
+: 1588191191:0;cd
+: 1588191194:0;rvm implode && sudo rm -rf ~/.rvm
+: 1588191254:0;sudo rm -rf $HOME/.rbenv /usr/local/rbenv /opt/rbenv /usr/local/opt/rbenv
+: 1588191271:0;brew uninstall --force rbenv ruby-build
+: 1588191286:0;brew install rbenv
+: 1588191909:0;rbenv install -l
+: 1588191922:0;rbenv install 2.7.1
+: 1588192584:0;rbenv global 2.7.1
+: 1588192601:0;ruby -v
+: 1588192726:0;gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit
+: 1588192850:0;brew install postgresql
+: 1588193255:0;brew services start postgresql
+: 1588193267:0;psql -d postgres
+: 1588193315:0;curl -Ls https://raw.githubusercontent.com/lewagon/setup/master/check.rb > _.rb && ruby _.rb || rm _.rb
+: 1588193863:0;defaults write -g ApplePressAndHoldEnabled -bool false
+: 1588193923:0;brew install vim
+: 1588194770:0;brew install neovim
+: 1588196246:0;ls
+: 1588196248:0;ls -a
+: 1588196277:0;nvim
+: 1588196288:0;nvim .vimrc
+: 1588196299:0;ls -a
+: 1588196395:0;z init.vim
+: 1588196446:0;cd .config
+: 1588196457:0;cd nvim
+: 1588226977:0;ls
+: 1588226980:0;cd code
+: 1588226982:0;ls
+: 1588226984:0;cd roanmertens
+: 1588226986:0;ls
+: 1588227080:0;g clone git@github.com:London-Vegan-Coders/LVC-Website.git
+: 1588227095:0;ls
+: 1588228909:0;nvim
+: 1588229092:0;ls
+: 1588229095:0;ls -a
+: 1588229099:0;cd
+: 1588229104:0;ls
+: 1588229106:0;ls -a
+: 1588229110:0;cd .config
+: 1588229292:0;ls
+: 1588229295:0;cd nvim
+: 1588229296:0;ls
+: 1588229299:0;nvim init.vim
+: 1588229495:0;ls
+: 1588229496:0;..
+: 1588229497:0;ls
+: 1588229514:0;cd nvim
+: 1588229516:0;ls
+: 1588229519:0;rm -rf
+: 1588229535:0;ls
+: 1588229542:0;g clone git@github.com:RoanMertens/vim.git
+: 1588229579:0;ls
+: 1588229593:0;rm init.vim
+: 1588229593:0;ls
+: 1588229599:0;mv vim/init.vim init.vim
+: 1588229600:0;ls
+: 1588229607:0;rm -rf vim
+: 1588229608:0;ls
+: 1588229613:0;nvim init.vim
+: 1588229629:0;vim init.vim
+: 1588229645:0;nvim
+: 1588229656:0;nvim init.vim
+: 1588229867:0;curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+: 1588229915:0;ls
+: 1588229918:0;nvim init.vim
+: 1588229966:0;..
+: 1588229967:0;ls
+: 1588229968:0;..
+: 1588229968:0;ls
+: 1588229970:0;ls -a
+: 1588229975:0;rm -rf .vim
+: 1588229978:0;ls
+: 1588229981:0;cd .config
+: 1588229982:0;ls
+: 1588229985:0;cd nvim
+: 1588229987:0;ls
+: 1588229996:0;[200~curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+: 1588230101:0;curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \\
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+: 1588230157:0;nvim init.vim
+: 1588230239:0;ls
+: 1588230249:0;nvim init.vim
+: 1588230410:0;which python3
+: 1588230414:0;which python
+: 1588230427:0;python3 --version
+: 1588230453:0;brew install python3
+: 1588230483:0;brew install python
+: 1588230495:0;nvim init.vim
+: 1588230668:0;pip2 install neovim --upgrade
+: 1588230686:0;brew install python
+: 1588230696:0;brew reinstall python
+: 1588230727:0;pip3 install neovim -upgrade
+: 1588230734:0;pip3 install neovim
+: 1588230826:0;pip3 install --user roan
+: 1588230848:0;pip install --upgrade pip
+: 1588230851:0;pip3 install --upgrade pip
+: 1588230882:0;pip3 install --upgrade pip --user roan
+: 1588230897:0;pip3 install --upgrade pip3 --user roan
+: 1588230914:0;pip3 install --upgrade pip
+: 1588230923:0;pip3 install --upgrade pip -user roan
+: 1588230935:0;pip3 install --upgrade -user roan
+: 1588230949:0;nvim init.vim
+: 1588231058:0;brew doctor
+: 1588231066:0;brew update
+: 1588231106:0;brew install python@2
+: 1588231162:0;brew install python2
+: 1588231222:0;python2 -version
+: 1588231224:0;python2 --version
+: 1588231326:0;python2 install pip2
+: 1588231328:0;python2 install pip
+: 1588231353:0;pip3 -V
+: 1588231407:0;pip3 install --upgrade pip
+: 1588231414:0;pip3 install --upgrade pip --user roan
+: 1588231432:0;nvim init.vim
+: 1588231537:0;pip3 install neovim --upgrade
+: 1588231543:0;pip3 install neovim --upgrade --user roan
+: 1588231599:0;pip3 install --upgrade setuptools wheel
+: 1588231610:0;pip3 install --upgrade setuptools wheel --user roan
+: 1588231709:0;python --version\
+
+: 1588231716:0;pip --version
+: 1588231768:0;brew install python
+: 1588231782:0;brew install python2
+: 1588231835:0;cd
+: 1588231837:0;curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+: 1588231876:0;python2 get_pip.py
+: 1588231889:0;ls
+: 1588231898:0;python get_pip.py
+: 1588231907:0;python2 get-pip.py
+: 1588231965:0;echo $PATH
+: 1588264992:0;brew list | grep python
+: 1588265006:0;brew info python
+: 1588265028:0;pip
+: 1588265060:0;cd
+: 1588265062:0;ls
+: 1588265064:0;cd ..
+: 1588265064:0;ls
+: 1588265065:0;..
+: 1588265066:0;ls
+: 1588265068:0;cd usr
+: 1588265069:0;ls
+: 1588265073:0;cd bin
+: 1588265074:0;ls
+: 1588265148:0;pip -V
+: 1588265155:0;pip3 -V
+: 1588265165:0;which pip3
+: 1588265189:0;pip3.8
+: 1588265212:0;pip3.8 -V
+: 1588265267:0;echo "alias pip=/usr/local/bin/pip3.8" >> ~/.zshrc
+: 1588265270:0;ls
+: 1588265327:0;nvim .zshrc
+: 1588265392:0;brew install python@2.7
+: 1588265417:0;ls
+: 1588265441:0;brew upgrade python2.7
+: 1588265452:0;brew update python2.7
+: 1588265460:0;brew upgrade python@2.7
+: 1588265579:0;alias python=/usr/local/bin/python3
+: 1588265591:0;brew info python
+: 1588265613:0;which pip
+: 1588265616:0;which pip3
+: 1588265647:0;exec $0
+: 1588265675:0;which pip
+: 1588265716:0;which python
+: 1588265725:0;python -V
+: 1588265762:0;cd ..
+: 1588265762:0;..
+: 1588265765:0;ls
+: 1588265770:0;cd usr
+: 1588265771:0;ls
+: 1588265775:0;cd bin
+: 1588265776:0;ls
+: 1588265799:0;echo "alias python=/usr/local/bin/python3.7" >> ~/.zshrc
+: 1588265816:0;which python
+: 1588265824:0;cd
+: 1588265862:0;brew install pyenv
+: 1588265914:0;pyenv versions
+: 1588266021:0;pyenv install 3.8.2
+: 1588266211:0;pyenv global 3.8.2
+: 1588266221:0;pyenv version
+: 1588266258:0;$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+: 1588266267:0;echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+: 1588266287:0;$ which python
+: 1588266294:0;which python
+: 1588266306:0;python -V
+: 1588266311:0;pip -V
+: 1588266332:0;nvim .zshrc
+: 1588266368:0;pip -V
+: 1588266374:0;python -V
+: 1588266552:0;ls
+: 1588266559:0;cd .config
+: 1588266560:0;ls
+: 1588266564:0;cd nvim
+: 1588266565:0;ls
+: 1588266567:0;nvim init.vim
+: 1588266655:0;pip install --upgrade neovim
+: 1588266667:0;pip install --upgrade pip
+: 1588266673:0;pip install --upgrade neovim
+: 1588266684:0;pip install --upgrade wheel
+: 1588266688:0;pip install --upgrade neovim
+: 1588266711:0;nvim init.vim
+: 1588266779:0;gem install vim neovim
+: 1588266797:0;nvim init.vim
+: 1588266885:0;brew install node
+: 1588267006:0;brew install yarn
+: 1588267098:0;nvim init.vim
+: 1588267229:0;npm i neovim
+: 1588267252:0;nvim init.vim
+: 1588267276:0;npm install -g neovim
+: 1588267286:0;nvim init.vim
+: 1588267377:0;pyenv install 2.7
+: 1588267438:0;pyenv install 2.7.17
+: 1588267579:0;nvim init.vim
+: 1588267615:0;pyenv help global
+: 1588267636:0;pyenv global 3.7.0 2.7.15
+: 1588267657:0;pyenv version
+: 1588267665:0;pyenv global 3.8.2 2.7.15
+: 1588267681:0;pyenv versions
+: 1588267688:0;pyenv global 3.8.2 2.7.17
+: 1588267694:0;nvim init.vim
+: 1588267765:0;python2 -V
+: 1588267776:0;python -v
+: 1588267790:0;python -V
+: 1588267844:0;pyenv virtualenv 2.7.17 neovim2
+: 1588267875:0;pyenv activate neovim2
+: 1588267915:0;pip install --upgrade neovim2
+: 1588267928:0;pip install neovim2
+: 1588267955:0;ls
+: 1588267956:0;cd
+: 1588267963:0;ls
+: 1588267964:0;..
+: 1588267965:0;ls
+: 1588267974:0;cd roanm
+: 1588267984:0;cd .pyenv
+: 1588267985:0;ls
+: 1588267987:0;cd shims
+: 1588267988:0;ls
+: 1588268007:0;pip2 install neovim
+: 1588268016:0;nvim init.vim
+: 1588268044:0;nvim
+: 1588268087:0;ls
+: 1588268120:0;..
+: 1588268120:0;ls
+: 1588268128:0;rm -rf nvim
+: 1588268129:0;ls -a
+: 1588268131:0;rm plugged
+: 1588268132:0;ls
+: 1588268140:0;rm -rf plugged
+: 1588268141:0;ls
+: 1588268145:0;cd configstore
+: 1588268146:0;ls
+: 1588268152:0;rm .
+: 1588268155:0;..
+: 1588268155:0;ls
+: 1588268159:0;rm -rf configstore
+: 1588268160:0;ls
+: 1588268171:0;g clone git@github.com:RoanMertens/vim.git
+: 1588268174:0;ls
+: 1588268186:0;mv vim nvim
+: 1588268187:0;ls
+: 1588268190:0;cd nvim
+: 1588268191:0;ls
+: 1588268194:0;g fetch
+: 1588268197:0;gst
+: 1588268198:0;ls
+: 1588268204:0;gb
+: 1588268216:0;g checkout coc
+: 1588268219:0;g pull origin coc
+: 1588268223:0;ls
+: 1588268233:0;nvim init.vim
+: 1588268537:0;nvim
+: 1588270833:0;gst
+: 1588270839:0;gco master
+: 1588270844:0;gco coc
+: 1588272256:0;cd
+: 1588272257:0;ls
+: 1588272265:0;nvim .zshrc
+: 1588272468:0;ls
+: 1588272469:0;la -a
+: 1588272473:0;ls -a
+: 1588272478:0;cd .oh-my-zsh
+: 1588272480:0;ls
+: 1588272486:0;cd plugins
+: 1588272488:0;ls
+: 1588272635:0;git clone https://github.com/zsh-users/zsh-autosuggestions zsh-autosuggestions
+: 1588274818:0;p
+: 1588274851:0;..
+: 1588274852:0;ls
+: 1588274857:0;cd themes
+: 1588274858:0;ls
+: 1588274910:0;wget -O pi.zsh-theme https://raw.githubusercontent.com/tobyjamesthomas/pi/master/pi.zsh-theme
+: 1588274917:0;ls
+: 1588274990:0;cd
+: 1588274991:0;ls
+: 1588274994:0;nvim .zshrc
+: 1588275046:0;cd
+: 1588275046:0;ls
+: 1588275049:0;nvim .zshrc
+: 1588275092:0;ls
+: 1588275095:0;cd code
+: 1588275096:0;ls
+: 1588275099:0;cd roanmertens
+: 1588275099:0;ls
+: 1588275102:0;cd LVC-Website
+: 1588275104:0;ls
+: 1588275117:0;pi
+: 1588275120:0;ls
+: 1588275127:0;touch banana
+: 1588275128:0;ls
+: 1588275132:0;rm banana
+: 1588275132:0;ls
+: 1588275146:0;nvim .zshrc
+: 1588275156:0;bundle
+: 1588275173:0;gem install bundler
+: 1588275214:0;brew info rbenv | tail -7
+: 1588275248:0;rbenv doctor
+: 1588275280:0;rbenv init
+: 1588275292:0;gem install bundler
+: 1588275307:0;cd
+: 1588275308:0;ls
+: 1588275312:0;nvim .zshrc
+: 1588275548:0;curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+: 1588275564:0;ruby -v
+: 1588275570:0;rbenv version -v
+: 1588275607:0;gem install bundler
+: 1588275698:0;rbenv install 2.7.1
+: 1588275706:0;ruby -v
+: 1588275727:0;rbenv global 2.7.1
+: 1588275728:0;ruby -v
+: 1588275851:0;ls
+: 1588275856:0;cd code/roanmertens/LVC-Website
+: 1588275858:0;ls
+: 1588275864:0;nvim .zshrc
+: 1588275872:0;ruby -v
+: 1588275961:0;cd
+: 1588275962:0;ls
+: 1588275966:0;nvim .zshrc
+: 1588276161:0;ls
+: 1588276172:0;cd code/roanmertens/LVC-Website
+: 1588276173:0;ls
+: 1588276176:0;gem install bundler
+: 1588276186:0;nvim .zshrc
+: 1588276262:0;which ruby
+: 1588276342:0;cd
+: 1588276344:0;ls
+: 1588276349:0;cd .rbenv
+: 1588276350:0;ls
+: 1588276353:0;cd shims
+: 1588276354:0;ls
+: 1588276358:0;cd ruby
+: 1588276363:0;nvim ruby
+: 1588276388:0;..
+: 1588276389:0;ls
+: 1588276392:0;cd versions
+: 1588276392:0;ls
+: 1588276404:0;..
+: 1588276405:0;ls
+: 1588276466:0;eval "$(rbenv init -)"
+: 1588276470:0;which ruby
+: 1588276490:0;gem install bundler
+: 1588276510:0;bundle
+: 1588276612:0;ruby -v
+: 1588276746:0;ls
+: 1588276749:0;cd
+: 1588276751:0;cd code/roanmertens/LVC-Website
+: 1588276756:0;ruby -v
+: 1588276758:0;cd
+: 1588276758:0;ls
+: 1588276763:0;nvim .bash
+: 1588276767:0;ls
+: 1588276768:0;ls -a
+: 1588276782:0;nvim .zshrc
+: 1588276836:0;ls
+: 1588276839:0;ruby -v
+: 1588276873:0;ls
+: 1588276874:0;cd code/roanmertens/LVC-Website
+: 1588276875:0;ls
+: 1588276882:0;bundle
+: 1588276894:0;bundle update --bundler
+: 1588276916:0;ruby -v
+: 1588276929:0;ls -a
+: 1588276934:0;nvim
+: 1588276949:0;ruby -v
+: 1588276957:0;rbenv install 2.6.3
+: 1588277657:0;gem install bundler
+: 1588277712:0;..
+: 1588277714:0;ruby -v
+: 1588277720:0;ls
+: 1588277724:0;rm -rf LVC-Website
+: 1588277725:0;ls
+: 1588277755:0;git clone git@github.com:London-Vegan-Coders/LVC-Website.git
+: 1588277776:0;cd LVC-Website
+: 1588277778:0;ruby -v
+: 1588277787:0;..
+: 1588277788:0;ls
+: 1588277861:0;git clone git@github.com:RoanMertens/grid-snake-basic.git
+: 1588277867:0;cd grid-snake-basic
+: 1588277867:0;ls
+: 1588277871:0;ruby -v
+: 1588277884:0;nvim
+: 1588277891:0;ruby -v
+: 1588277897:0;bundle
+: 1588277906:0;gem install bundler
+: 1588277911:0;rbenv install 2.6.1
+: 1588278496:0;gem install bundler
+: 1588278520:0;bundle
+: 1588279427:0;..
+: 1588279428:0;ls
+: 1588279430:0;cd LVC-Website
+: 1588279432:0;ls
+: 1588279441:0;ruby -v
+: 1588279451:0;which ruby
+: 1588279463:0;..
+: 1588279464:0;ls
+: 1588279466:0;cd grid-snake-basic
+: 1588279468:0;which ruby
+: 1588279473:0;ruby -v
+: 1588279487:0;ls
+: 1588279488:0;..
+: 1588279489:0;ls
+: 1588279490:0;cd LVC-Website
+: 1588279492:0;ls
+: 1588279503:0;ruby -v
+: 1588279521:0;rbenv local 2.6.3
+: 1588279526:0;ruby -v
+: 1588279532:0;gem install bundler
+: 1588279540:0;bundle
+: 1588279554:0;rbenv versions
+: 1588279565:0;rbenv install 2.7.0
+: 1588280560:0;bundle
+: 1588280574:0;rbenv local 2.7.0
+: 1588280576:0;bundle
+: 1588281014:0;rails db:setup
+: 1588281023:0;yarn
+: 1588281395:0;rails db:setup
+: 1588281419:0;rails s
+: 1588281508:0;ls
+: 1588281511:0;gst
+: 1588281512:0;g diff
+: 1588281538:0;iterm
+: 1588412040:0;cd
+: 1588412043:0;brew cask install keycastr
+: 1588412408:0;ls
+: 1588433585:0;cd Downloads
+: 1588433586:0;ls
+: 1588433589:0;cd tattoo-examples
+: 1588433589:0;ls
+: 1588433592:0;cd payslips
+: 1588433592:0;ls
+: 1588433595:0;cd
+: 1588515251:0;ls
+: 1588515256:0;cd code/roanmertens/LVC-Website
+: 1588515259:0;rails 
+: 1588515264:0;rails s
+: 1588537878:0;vimtutor
+: 1588537952:0;nvim
+: 1588537980:0;gem install solargraph
+: 1588538256:0;nvim
+: 1588795154:0;gst
+: 1588795156:0;g diff
+: 1588795159:0;g stash
+: 1588795162:0;gst
+: 1588795166:0;g pull origin master
+: 1588795172:0;gst
+: 1588795176:0;g stash apply
+: 1588795179:0;g add .
+: 1588795180:0;gst
+: 1588795190:0;g commit -m "add ruby version file"
+: 1588795192:0;gst
+: 1588795196:0;bundle
+: 1588795202:0;yarn
+: 1588795207:0;rails db:migrate
+: 1588795234:0;rails s
+: 1588797271:0;nvim
+: 1589488987:0;brew install github/gh/gh
+: 1589489220:0;gh help
+: 1589489229:0;gh pr list
+: 1589489257:0;cd
+: 1589489259:0;gh pr list
+: 1589565148:0;ls
+: 1589565150:0;cd code
+: 1589565151:0;ls
+: 1589565154:0;cd roanmertens
+: 1589565155:0;ls
+: 1589565274:0;ruby -v
+: 1589565281:0;rbenv versions
+: 1589565285:0;ruby versions
+: 1589565312:0;rbenv install -l
+: 1589565325:0;rbenv versions
+: 1589565333:0;bundle -v
+: 1589565341:0;bundle update
+: 1589565366:0;gem update bundler
+: 1589565375:0;rails -v
+: 1589565394:0;gem install rails
+: 1589565617:0;gem install solargraph
+: 1589565641:0;gem install rspec
+: 1589565650:0;gem install rubocop
+: 1589566069:0;gh pr list
+: 1589567617:0;rails -h
+: 1589569363:0;rails -v
+: 1589569440:0;rails new novel-api --api --database=postgresql -T
+: 1589569668:0;ls
+: 1589569670:0;nvim
+: 1589569677:0;ls
+: 1589569680:0;cd novel-api
+: 1589569682:0;nvim
+: 1589569799:0;gst
+: 1589569807:0;g add .
+: 1589569815:0;g commit -m "initial commit"
+: 1589569817:0;gst
+: 1589569821:0;nvim
+: 1589569831:0;rails db:setup
+: 1589569843:0;rails db:migrate
+: 1589569852:0;gst
+: 1589569860:0;rails db:setup
+: 1589569876:0;nvim
+: 1589569881:0;gst
+: 1589569882:0;g add .
+: 1589569896:0;g commit -m "initial db setup"
+: 1589569900:0;nvim
+: 1589569959:0;bundle update
+: 1589569964:0;gst
+: 1589569967:0;g diff
+: 1589569972:0;gst
+: 1589569974:0;g add .
+: 1589569997:0;g commit -m "set tzinfo as default for all os"
+: 1589570102:0;fg
+: 1589570104:0;nvim
+: 1589570288:0;gst
+: 1589570291:0;g add.
+: 1589570294:0;g add .
+: 1589570302:0;g commit -m "refactor gemfile"
+: 1589570335:0;fg
+: 1589570336:0;nvim
+: 1589570409:0;bundle update
+: 1589570414:0;bundle
+: 1589570444:0;gst
+: 1589570448:0;g diff
+: 1589570470:0;gst
+: 1589570472:0;nvim
+: 1589570484:0;ls
+: 1589570493:0;touch .env
+: 1589570494:0;gst
+: 1589570515:0;nvim
+: 1589570567:0;rails c
+: 1589570625:0;nvim
+: 1589570736:0;rails s -p 3001
+: 1589570776:0;nvim
+: 1589570797:0;rails s
+: 1589570811:0;gst
+: 1589570813:0;g diff
+: 1589570817:0;gst
+: 1589570823:0;g add Gemfile Gemfile.lock
+: 1589570823:0;gst
+: 1589570851:0;g commit -m "add dotenv gem for safe environment variables:
+: 1589570854:0;g commit -m "add dotenv gem for safe environment variables"
+: 1589570857:0;gst
+: 1589570859:0;g add .
+: 1589570873:0;g commit -m "set default port to 3001"
+: 1589570874:0;gst
+: 1589571493:0;nvim
+: 1589571592:0;bundle
+: 1589571638:0;bundle update
+: 1589571763:0;rails g devise:install
+: 1589572161:0;rails g devise user
+: 1589572186:0;nvim
+: 1589572241:0;rails db:migrate
+: 1589572271:0;rails db:drop
+: 1589572320:0;rails db:seetup
+: 1589572324:0;rails db:setup
+: 1589572330:0;rails db:migrate
+: 1589572363:0;gst
+: 1589572367:0;nvim
+: 1589572742:0;rails g controller v1/users
+: 1589572765:0;nvim
+: 1589572934:0;gst
+: 1589572938:0;g add .
+: 1589572948:0;g commit -m "add devise skeleton"
+: 1589573272:0;bundle
+: 1589573813:0;rails routes
+: 1589575258:0;rails s
+: 1589610589:0;ls
+: 1589610590:0;gst
+: 1589610603:0;rails s
+: 1589712921:0;gst
+: 1589712922:0;g diff
+: 1589712930:0;g add .
+: 1589712942:0;g commit -m "add session skeleton"
+: 1589712973:0;rails c
+: 1589713192:0;nvim
+: 1589713396:0;rails s
+: 1589713574:0;rails c
+: 1589728246:0;nvim
+: 1589728254:0;ls
+: 1589728256:0;gst
+: 1589728261:0;g diff
+: 1589728643:0;bundle
+: 1589728789:0;rails g migration add_authentication_token_to_users "authentication_token:string{30}:uniq"
+: 1589728793:0;rails db:migrate
+: 1589728830:0;rails c
+: 1589728967:0;rails s
+: 1589729021:0;gst
+: 1589729024:0;g diff Gemfile
+: 1589729028:0;g add .
+: 1589729032:0;gst
+: 1589729050:0;g reset hard db/migrate db/schema.rb
+: 1589729056:0;g reset db/migrate db/schema.rb
+: 1589729057:0;gst
+: 1589729096:0;g commit -m "add session token with simple_token_authentication gem"
+: 1589729097:0;gst
+: 1589729101:0;g add .
+: 1589729107:0;g commit -m "migrate"
+: 1589729108:0;gst
+: 1589909665:0;g remote add origin git@github.com:RoanMertens/test_users_one.git
+: 1589909667:0;gst
+: 1589909671:0;g push origin master
+: 1589910054:0;gst
+: 1590771358:0;ls
+: 1590771360:0;gst
+: 1590771363:0;g pull origin master
+: 1590771370:0;bundle
+: 1590771373:0;yarn
+: 1590771378:0;nvim
+: 1590771408:0;bundle update
+: 1590771423:0;gst
+: 1590771427:0;g diff
+: 1590771431:0;g add .
+: 1590771441:0;g commit -m "update gems"
+: 1590771444:0;g push origin master
+: 1590771499:0;..
+: 1590771500:0;ls
+: 1590771504:0;cd LVC-Website
+: 1590771508:0;g pull origin master
+: 1590771531:0;bundle
+: 1590771532:0;yarn
+: 1590771554:0;bundle update
+: 1590771569:0;rails db:migrate
+: 1590771578:0;g add .
+: 1590771579:0;gst
+: 1590771601:0;g checkout master db/schema.rb
+: 1590771602:0;gst
+: 1590771610:0;g commit -m "update gemlock file"
+: 1590771615:0;rails db:migrate
+: 1590771626:0;gst
+: 1590771628:0;g diff
+: 1590771632:0;g add .
+: 1590771638:0;g commit -m "migrate"
+: 1590771644:0;gst
+: 1590771651:0;g push origin master
+: 1590771760:0;g pull origin master
+: 1590771768:0;rails s
+: 1590771778:0;rails routes
+: 1590772749:0;gst
+: 1591469467:0;irb
+: 1591972915:0;cat ~/.ssh/id_ed25519.pub
+: 1591972962:0;..
+: 1591972963:0;ls
+: 1591972989:0;..
+: 1591972990:0;ls
+: 1591972994:0;mkdir didemertens
+: 1591972996:0;cd didemertens
+: 1591973014:0;g clone https://gitlab.com/didemertens/personal-blog.gitgit@github.com:RoanMertens/vim.git
+: 1591973170:0;g clone git@gitlab.com:didemertens/personal-blog.git
+: 1591973185:0;ls
+: 1591973188:0;cd personal-blog
+: 1591973193:0;ls
+: 1591973215:0;yarn
+: 1591973339:0;g remote show origin
+: 1591973384:0;git remote rename origin old-origin\
+git remote add origin git@gitlab.com:roanmertens91/roan-blog.git\
+git push -u origin --all\
+git push -u origin --tags
+: 1591973411:0;g remote show origin
+: 1592029621:0;..
+: 1592029625:0;ls
+: 1592029628:0;cd roanmertens
+: 1592029630:0;ls
+: 1592029642:0;history
+: 1592031187:0;rails -v
+: 1592031197:0;ruby -v
+: 1592031259:0;rails new novel-api-skeleton --api --database=postgreql -T
+: 1592031276:0;rails new novel-api-skeleton --api --database=postgresql -T
+: 1592031312:0;ls
+: 1592031319:0;cd novel-api-skeleton
+: 1592031320:0;ls
+: 1592031335:0;nvim
+: 1592031340:0;gst
+: 1592031348:0;nvim
+: 1592032056:0;ruby -v
+: 1592032336:0;docker-compose build
+: 1592032778:0;docker-compose run web rails db:create db:migrate
+: 1592032974:0;docker compose up
+: 1592032982:0;docker-compose up
+: 1592033024:0;docker-compose down
+: 1592033030:0;gst
+: 1592033083:0;g diff ]:w 
+: 1592033116:0;nvim ]:w
+: 1592033160:0;gst
+: 1592033164:0;g add .
+: 1592033523:0;gst
+: 1592033525:0;g add .
+: 1592033546:0;g commit -m "initial setup with docker"
+: 1592033547:0;gst
+: 1592033586:0;git remote add origin git@github.com:RoanMertens/novel-api-skeleton.git\
+git push -u origin master
+: 1592035410:0;docker-compose up
+: 1592037002:0;gst
+: 1592037004:0;g add .
+: 1592037012:0;g commit -m "update readme"
+: 1592037062:0;..
+: 1592037063:0;ls
+: 1592037066:0;cd LVC-Website
+: 1592037067:0;ls
+: 1592037073:0;nvim
+: 1592037238:0;gst
+: 1592037241:0;g pull origin master
+: 1592037269:0;gco -b docker-setup
+: 1592037971:0;gst
+: 1592037974:0;docker-compose build
+: 1592038375:0;docker ps -a
+: 1592038423:0;docker stop f8b65e1357db
+: 1592038443:0;docker images
+: 1592038471:0;docker rmi 81f7c040e75b
+: 1592038504:0;docker ps -a
+: 1592038519:0;docker rm f8b65e1357db
+: 1592038522:0;docker rmi 81f7c040e75b
+: 1592038530:0;docker images
+: 1592038545:0;docker ps -a
+: 1592038973:0;docker-compose build
+: 1592039121:0;docker ps -a
+: 1592039145:0;docker rm b
+: 1592039151:0;docker rmi b
+: 1592039167:0;docker ps -a
+: 1592039176:0;docker images
+: 1592039196:0;docker rmi e0979fb3f46fb
+: 1592039204:0;docker images
+: 1592039228:0;docker rmi e0979fb3f46f
+: 1592039232:0;docker images
+: 1592039246:0;docker ps -a
+: 1592039255:0;docker-compose build
+: 1592039393:0;docker ps -a
+: 1592039404:0;docker rm ef
+: 1592039408:0;docker ps -a
+: 1592039412:0;docker images
+: 1592039420:0;docker rmi 55
+: 1592039424:0;docker images
+: 1592039433:0;docker-compose build
+: 1592039595:0;docker ps -a
+: 1592039600:0;docker rm 03
+: 1592039603:0;docker ps -a
+: 1592039607:0;docker images
+: 1592039618:0;docker rmi 8
+: 1592039621:0;docker images
+: 1592039633:0;docker-compose build
+: 1592039683:0;docker ps -a
+: 1592039689:0;docker rm 2a
+: 1592039692:0;docker ps -a
+: 1592039694:0;docker images
+: 1592039702:0;docker rmi a6
+: 1592039704:0;docker images
+: 1592039709:0;docker-compose build
+: 1592039982:0;docker images
+: 1592039985:0;docker ps -a
+: 1592039991:0;docker rm 51
+: 1592039995:0;docker images
+: 1592040004:0;docker rmi e2
+: 1592040021:0;gst
+: 1592040052:0;docker-compose build
+: 1592040449:0;docker-compose run web rails db:create db:migrate
+: 1592040509:0;docker-compose run web yarn
+: 1592040522:0;docker-compose run yarn
+: 1592040578:0;docker ps -a
+: 1592040596:0;docker rm dd ef
+: 1592040598:0;docker ps -a
+: 1592040605:0;docker images
+: 1592040617:0;docker rmi e4
+: 1592040629:0;docker images
+: 1592040633:0;docker ps -a
+: 1592040657:0;docker-compose build
+: 1592041031:0;docker ps -a
+: 1592041045:0;docker rm cdec7efcb334dd
+: 1592041051:0;docker rm cdec7efcb334d
+: 1592041053:0;docker rm cdec7efcb334
+: 1592041058:0;docker ps -a
+: 1592041062:0;docker images
+: 1592041069:0;docker rmi cffa3f339506e4
+: 1592041072:0;docker rmi cffa3f339506
+: 1592041079:0;docker images
+: 1592041082:0;docker ps -a
+: 1592041091:0;docker-compose build
+: 1592041474:0;docker ps -a
+: 1592041483:0;docker rm 2e
+: 1592041488:0;docker images
+: 1592041494:0;docker rmi 5e
+: 1592041501:0;docker build
+: 1592041506:0;docker-compose build
+: 1592042478:0;docker ps -a
+: 1592042505:0;docker-compose run web rails db:create db:migrate
+: 1592043562:0;docker ps -a
+: 1592043578:0;docker rm 6d cb
+: 1592043583:0;docker images
+: 1592043599:0;docker rmi e6 19
+: 1592043616:0;docker-compose build
+: 1592043916:0;gst
+: 1592043923:0;g reset hard
+: 1592043924:0;gst
+: 1592043930:0;g reset --hard
+: 1592043931:0;gst
+: 1592043951:0;rm -rf .dockerignore Dockerfile docker-compose.yml
+: 1592043953:0;gst
+: 1592043961:0;nvim
+: 1592048882:0;docker-compose build
+: 1592049396:0;docker-compose run web bundle install
+: 1592049479:0;docker-compose run web yarn install
+: 1592049654:0;docker-compose run web rails db:create db:migrate
+: 1592049742:0;docker-compose run web rake db:create
+: 1592050065:0;docker-compose run web rails db:create db:migrate
+: 1592050111:0;docker ps -a
+: 1592050149:0;docker rm 82 c9 f4 ee 62 54
+: 1592050159:0;docker stop 54
+: 1592050165:0;docker rm 54
+: 1592050169:0;docker ps -a
+: 1592050180:0;docker images
+: 1592050238:0;docker rmi e11 03 29
+: 1592050244:0;docker images
+: 1592050260:0;docker-compose build
+: 1592050704:0;docker-compose run web bundle install
+: 1592050752:0;docker-compose run web yarn install
+: 1592050775:0;docker-compose run web rails db:create db:migrate
+: 1592051194:0;docker ps -a
+: 1592051222:0;docker rm 102 211 85 36 
+: 1592051226:0;docker ps -a
+: 1592051229:0;docker images
+: 1592051244:0;docker rmi 30
+: 1592051253:0;docker images
+: 1592051268:0;docker-compose build
+: 1592051998:0;docker-compose run web bundle install
+: 1592052031:0;docker-compose run web yarn install
+: 1592052057:0;docker-compose run web rails db:create db:migrate
+: 1592052106:0;docker-compose up
+: 1592052153:0;docker-compose down
+: 1592053707:0;docker-compose up
+: 1592053890:0;docker-compose down
+: 1592053981:0;gst
+: 1592053987:0;g add. 
+: 1592053989:0;g add .
+: 1592054016:0;g commit -m "add initial docker setup to project"
+: 1592054022:0;g push origin docker-setup
+: 1592054034:0;gst
+: 1592054133:0;gco master
+: 1592054135:0;g pull origin master
+: 1592054144:0;docker-compose up
+: 1592058325:0;docker-compose down
+: 1592058365:0;..
+: 1592058366:0;ls
+: 1592058372:0;cd novel-api-skeleton
+: 1592058373:0;ls
+: 1592058378:0;nvim
+: 1592058535:0;..
+: 1592058536:0;ls
+: 1592058539:0;novel-api-skeleton
+: 1592058541:0;rspec
+: 1592058582:0;gst
+: 1592058584:0;g add .
+: 1592058608:0;g commit -m "add skeleton ci github action"
+: 1592058611:0;gst
+: 1592058627:0;gco -b github-actions-ci-cd
+: 1592058632:0;g push origin github-actions-ci-cd 
+: 1592058640:0;gco master
+: 1592058642:0;gco -
+: 1592058648:0;gb -D master
+: 1592058650:0;gco master
+: 1592058654:0;g pull origin master
+: 1592059843:0;gst
+: 1592059854:0;gco -
+: 1592059857:0;nvim
+: 1592060315:0;gst
+: 1592060316:0;g add .
+: 1592060595:0;gst
+: 1592060596:0;g add .
+: 1592060616:0;g commit -m "add automated rspec on pull request"
+: 1592060622:0;g push origin github-actions-ci-cd 
+: 1592061815:0;gst
+: 1592061817:0;g add .
+: 1592061827:0;g commit -m "add env variables to ci pipeline"
+: 1592061832:0;gst
+: 1592061836:0;g push origin github-actions-ci-cd 
+: 1592062542:0;gst
+: 1592062543:0;g add .
+: 1592062558:0;g commit -m "playing around with the action code"
+: 1592062560:0;g push origin github-actions-ci-cd 
+: 1592063060:0;gst
+: 1592063061:0;g add .
+: 1592063065:0;g commit -m "playing around with the action code 2"
+: 1592063067:0;g push origin github-actions-ci-cd 
+: 1592063108:0;gst
+: 1592063352:0;g add .
+: 1592063359:0;g commit -m "test 3"
+: 1592063360:0;g push origin github-actions-ci-cd 
+: 1592064201:0;gst
+: 1592065302:0;nvim
+: 1592235514:0;..
+: 1592235516:0;ls
+: 1592235652:0;..
+: 1592235653:0;ls
+: 1592235654:0;cd didemertens
+: 1592235655:0;ls
+: 1592236050:0;rm -rf personal-blog
+: 1592236072:0;ls
+: 1592236086:0;g clone git@gitlab.com:roanmertens91/personal-blog.git
+: 1592236092:0;ls
+: 1592236093:0;cd personal-blog
+: 1592236267:0;cd
+: 1592236268:0;ls
+: 1592236271:0;la -a
+: 1592236276:0;ls -a
+: 1592236287:0;nvim .zshrc
+: 1592236312:0;ls
+: 1592236315:0;cd code/didemertens
+: 1592236316:0;ls
+: 1592236318:0;cd personal-blog
+: 1592236325:0;vscode .
+: 1592236328:0;cd
+: 1592236330:0;vsc
+: 1592236334:0;ls
+: 1592236339:0;cd code/didemertens
+: 1592236340:0;ls
+: 1592236341:0;per
+: 1592236344:0;personal-blog
+: 1592236345:0;code
+: 1592236400:0;ls
+: 1592236402:0;npm install
+: 1592236460:0;g
+: 1592236468:0;gatsby develop
+: 1592236486:0;ls
+: 1592236980:0;g status
+: 1592236981:0;g add .
+: 1592236992:0;g commit -m "update gatsby config file"
+: 1592236995:0;g remote show origin
+: 1592237001:0;g push origin master
+: 1592237821:0;g status
+: 1592237822:0;g add .
+: 1592237833:0;g commit -m "change cms config file"
+: 1592237838:0;g push origin master
+: 1592238906:0;g pull or
+: 1592238917:0;g pull origin master 
+: 1592244968:0;gst
+: 1592244972:0;ls
+: 1592244973:0;.
+: 1592244976:0;..
+: 1592244984:0;cd roanmertens
+: 1592244985:0;ls
+: 1592244988:0;cd novel-api
+: 1592244990:0;..
+: 1592244993:0;cd novel-api-skeleton
+: 1592244998:0;gst
+: 1592245000:0;g diff
+: 1592245008:0;g reset --hard
+: 1592245010:0;gst
+: 1592245019:0;nvim
+: 1592246535:0;gst
+: 1592246539:0;bundle
+: 1592246542:0;yarn
+: 1592246549:0;rails db:setup
+: 1592246684:0;\du
+: 1592246700:0;psql
+: 1592246771:0;postgres -V
+: 1592246779:0;psql postgres
+: 1592246978:0;rails db:setup
+: 1592247054:0;ls
+: 1592247056:0;gst
+: 1592247260:0;rails db:setup
+: 1592247278:0;docker ps -a
+: 1592247490:0;gst
+: 1592247492:0;g diff
+: 1592247565:0;gst
+: 1592247756:0;g reset --hard
+: 1592247758:0;gst
+: 1592247766:0;rm -rf node_modules yarn.lock
+: 1592247767:0;gst
+: 1592247772:0;docker-compose up
+: 1592247789:0;docker-compose down
+: 1592247904:0;gst
+: 1592248323:0;g add .
+: 1592248328:0;g commit -m "test 4"
+: 1592248333:0;g push origin github-actions-ci-cd 
+: 1592248458:0;gst
+: 1592248460:0;g add .
+: 1592248468:0;g commit -m "add env variables back in"
+: 1592248471:0;g push origin github-actions-ci-cd 
+: 1592249697:0;..
+: 1592249698:0;ls
+: 1592249704:0;cd grid-snake-basic
+: 1592249705:0;ls
+: 1592249709:0;..
+: 1592249712:0;ls
+: 1592249721:0;cd LVC-Website
+: 1592249723:0;ls
+: 1592249733:0;cd config
+: 1592249734:0;ls
+: 1592249735:0;nvim
+: 1592249747:0;..
+: 1592249749:0;ls
+: 1592249752:0;cd novel-api
+: 1592249753:0;ls
+: 1592249757:0;nvim
+: 1592250087:0;ls
+: 1592250091:0;..
+: 1592250092:0;ls
+: 1592250097:0;cd novel-api-skeleton
+: 1592250098:0;ls
+: 1592250100:0;nvim
+: 1592250136:0;rails db:create
+: 1592250261:0;rails db:migrate
+: 1592250264:0;rails s
+: 1592250302:0;rails db:drop
+: 1592250346:0;rails db:create
+: 1592251341:0;postgres psql
+: 1592251372:0;postgres -V
+: 1592251377:0;history
+: 1592251390:0;psql
+: 1592251397:0;psql postgres
+: 1592252064:0;nvim
+: 1592252185:0;rails db:drop
+: 1592500085:0;..
+: 1592500087:0;ls
+: 1592500092:0;cd LVC-Website
+: 1592500117:0;nvim
+: 1592500213:0;gst
+: 1592500219:0;gst]
+: 1592500220:0;gst
+: 1592500222:0;g diff
+: 1592500223:0;g add .
+: 1592500242:0;gco -b add-env-sample-file
+: 1592500252:0;g push origin add-env-sample-file
+: 1592500263:0;gb -D master
+: 1592500267:0;gco master
+: 1592500366:0;gst
+: 1592500379:0;gco add-env-sample-file 
+: 1592500380:0;gst
+: 1592500398:0;g commit -m "add env variables sample file with working variables"
+: 1592500401:0;g push origin add-env-sample-file
+: 1592500929:0;gco master
+: 1592500936:0;g pull origin master 
+: 1592501205:0;nvim
+: 1592501324:0;gst
+: 1592501327:0;g add .
+: 1592501331:0;g commit -m "update readme"
+: 1592501333:0;g push origin master
+: 1592501338:0;g pull origin master
+: 1594901777:0;cd
+: 1594901779:0;brew tap homebrew/cask-drivers
+: 1594901971:0;brew cask install qmk-toolbox
+: 1594902430:0;brew install dfu-util
+: 1594903250:0;ls
+: 1594903253:0;cd Downloads
+: 1594903254:0;ls
+: 1594903257:0;..
+: 1594903266:0;find dfu
+: 1594903268:0;ls
+: 1594909363:0;cd Downloads
+: 1594909363:0;ls
+: 1594909370:0;cd ortho60_keymaps
+: 1594909371:0;ls
+: 1594909425:0;dfu-util -d 1eaf:0003 -a 2 -D "cannonkeys_ortho60_test_roro1.bin"
+: 1595233187:0;.
+: 1595233188:0;ls
+: 1595233323:0;dfu-util -d 1eaf:0003 -a 2 -D "ortho60_roan_v2.bin"
+: 1599674801:0;..
+: 1599674802:0;ls
+: 1599674812:0;qmk
+: 1599674826:0;brew install qmk/qmk/qmk
+: 1599675494:0;ls
+: 1599676510:0;cd dactyl_manuform_keymaps
+: 1599676511:0;ls
+: 1599676521:0;qmk compile -kb handwired/dactyl_manuform/5x6 -km
+: 1599677311:0;nvim
+: 1599677549:0;ls
+: 1599677553:0;nvim
+: 1599904228:0;upgrade_oh_my_zsh
+: 1599904236:0;omz update
+: 1599904264:0;brew update
+: 1599904312:0;brew upgrade
+: 1599904454:0;gst
+: 1599904457:0;cd
+: 1599904462:0;ls
+: 1599904464:0;ls -a
+: 1599904478:0;cd .oh-my-zsh
+: 1599904483:0;g pull origin master
+: 1599904489:0;g pull
+: 1599904492:0;gst
+: 1599904493:0;g diff
+: 1599904502:0;g stash
+: 1599904505:0;g pull origin master
+: 1599904509:0;gst
+: 1599904519:0;ls
+: 1599904526:0;ls -a
+: 1599904531:0;cd
+: 1599904535:0;ls -a
+: 1599904540:0;cd .config
+: 1599904541:0;ls
+: 1599904545:0;cd nvim
+: 1599904547:0;ls
+: 1599904549:0;nvim
+: 1599905330:0;cd
+: 1599905331:0;ls
+: 1599905337:0;cd code/roanmertens
+: 1599905338:0;ls
+: 1599905346:0;rails -v
+: 1599905349:0;ruby -v
+: 1599905376:0;rbenv -v
+: 1599905419:0;rbenv versions
+: 1599905492:0;rbenv install -l
+: 1599905504:0;rbenv install -list-all
+: 1599905557:0;gem update rails
+: 1599934386:0;ls
+: 1599934391:0;cd LVC-Website
+: 1599934394:0;gst
+: 1599934397:0;g pull origin master
+: 1599934425:0;docker-compose run web bundle
+: 1599934900:0;docker-compose run web bundle install
+: 1599934932:0;docker-compose up
+: 1599935004:0;docker-compose down
+: 1599935023:0;docker images -a
+: 1599935039:0;docker rmi cd3
+: 1599935043:0;docker rmi cb3
+: 1599935073:0;docker-compose build
+: 1599935422:0;docker-compose run web yarn
+: 1599936759:0;docker-compose run web bundle install
+: 1599936770:0;docker-compose run web rails db:create db:migrate
+: 1599936810:0;docker-compose up
+: 1599936870:0;docker-compose down
+: 1599936882:0;docker-compose up
+: 1599936962:0;spring stop
+: 1599937012:0;docker images -a
+: 1599937022:0;docker rmi dac
+: 1599937028:0;docker images -a
+: 1599937042:0;docker-compose up
+: 1599937527:0;lsof -wni tcp:3000
+: 1599939837:0;lsof -wni
+: 1599939889:0;killall -9 rails
+: 1599939897:0;ps aux | grep rails
+: 1599939922:0;kill -9 46024
+: 1599939937:0;kill -9 4268300
+: 1599939963:0;ps aux | grep rails
+: 1599939973:0;kill -9 688
+: 1599939990:0;pkill -9 rails
+: 1599939996:0;ps aux | grep rails
+: 1599940004:0;docker-compose down
+: 1599940013:0;docker-compose up
+: 1599940075:0;ls
+: 1599940078:0;app/tmp/pids/server.pid
+: 1599940081:0;app/
+: 1599940082:0;ls
+: 1599940084:0;..
+: 1599940085:0;ls
+: 1599940090:0;ls -a
+: 1599940130:0;docker-compose down
+: 1599940133:0;docker images -a
+: 1599940151:0;docker rmi 7ad331292c75dac
+: 1599940154:0;docker rmi 7ad3
+: 1599940158:0;docker images -a
+: 1599940169:0;docker rmi 46 b9 ea
+: 1599940178:0;docker images -a
+: 1599940222:0;docker-compose build
+: 1599940666:0;docker-compose run web bundle install
+: 1599940758:0;docker-compose run web yarn install
+: 1599940774:0;docker-compose run web rails db:create db:migrate
+: 1599940907:0;docker-compose up
+: 1599941088:0;docker-compose run web sudo killall -9 ruby
+: 1599941102:0;sudo rm tmp/pids/server.pid 
+: 1599941108:0;docker-compose up
+: 1599941455:0;docker-compose down
+: 1599984265:0;..
+: 1599989100:0;rails -v
+: 1599989105:0;gem update rails
+: 1599989170:0;rails new basic-oauth-api --api --database=postgresql -T
+: 1599989905:0;ls
+: 1599989906:0;cd basic-oauth-api
+: 1599989908:0;ls
+: 1599989916:0;bundle
+: 1599989919:0;yarn
+: 1599989936:0;rails db:setup
+: 1599989952:0;rails db:migrate
+: 1599989960:0;rails db:setup
+: 1599989964:0;rails s
+: 1599989976:0;nvim
+: 1602798268:24;brew install qmk/qmk/qmk
+: 1602798361:203;brew upgrade qmk/qmk/qmk
+: 1602798592:196;qmk setup
+: 1606055368:0;cd
+: 1606055369:0;ls
+: 1606055371:0;cd Downloads
+: 1606055377:0;ls
+: 1606055386:0;cd ortho60_keymaps
+: 1606055387:0;ls
+: 1606055419:0;qmk help
+: 1606055453:0;qmk list-keyboards
+: 1606055535:0;..
+: 1606055535:0;ls
+: 1606055578:0;qmk cannonkeys/ortho60 -km cannonkeys_ortho60_roan_v3.bin
+: 1606055604:0;qmk flash cannonkeys/ortho60 -km cannonkeys_ortho60_roan_v3.bin
+: 1606055705:0;qmk flash cannonkeys_ortho60_roan_v3.bin
+: 1606055729:0;qmk flash help
+: 1606055735:0;qmk help
+: 1606055849:0;ls
+: 1606055960:0;qmk flash cannonkeys/ortho60 -km cannonkeys_ortho60_roan_v3
+: 1606056017:0;qmk flash
+: 1606056961:0;dfu-util -d 1eaf:0003 -a 2 -D "ortho60_roan_v3.bin"
+: 1606056981:0;ls
+: 1606057026:0;dfu-util -d 1eaf:0003 -a 2 -D 'cannonkey_ortho60_roan_v3.bin'
+: 1606057040:0;dfu-util -d 1eaf:0003 -a 2 -D 'cannonkeys_ortho60_roan_v3.bin'
+: 1608821750:0;brew install java
+: 1608973175:0;npm upgrade
+: 1608973179:0;npm update
+: 1608973192:0;npm install -g npm
+: 1608973219:0;ls
+: 1608973220:0;..
+: 1608973220:0;ls
+: 1608973225:0;cd code/roanmertens
+: 1608973226:0;ls
+: 1608973239:0;mkdir minecraft-bots
+: 1608973240:0;ls
+: 1608973242:0;cd minecraft-bots
+: 1608973265:0;mkdir basic-bot
+: 1608973267:0;cd basic-bot
+: 1608973270:0;npm init
+: 1608973315:0;npm install mineflayer
+: 1608973353:0;ls
+: 1608973363:0;touch index.js
+: 1608973381:0;nvim
+: 1608974334:0;node index.js
+: 1608974371:0;nvim
+: 1608974850:0;node index.js
+: 1608974899:0;fg
+: 1608975026:0;node index.js
+: 1608975029:0;fg
+: 1608975057:0;node index.js
+: 1608975127:0;fg
+: 1608976396:0;ls
+: 1608976401:0;..
+: 1608976402:0;ls
+: 1608976416:0;mv basic-bot look-bot
+: 1608976417:0;ls
+: 1608976425:0;mkdir pathfinder-bot
+: 1608976428:0;cd pathfinder-bot
+: 1608976429:0;ls
+: 1608976453:0;npm init
+: 1608976465:0;ls
+: 1608976468:0;touch index.js
+: 1608976470:0;fg
+: 1608976475:0;nvim
+: 1608976530:0;npm install -g mineflayer
+: 1608976552:0;fg
+: 1608976553:0;nvim
+: 1608976634:0;..
+: 1608976635:0;ls
+: 1608976638:0;cd look-bot
+: 1608976638:0;ls
+: 1608976640:0;nvim
+: 1608976654:0;..
+: 1608976654:0;ls
+: 1608976656:0;cd pathfinder-bot
+: 1608976657:0;ls
+: 1608976658:0;nvim
+: 1608976794:0;npm install -g mineflayer-pathfinder
+: 1608976913:0;fg
+: 1608977375:0;npm install -g minecraft-data
+: 1608977405:0;fg
+: 1608978091:0;node index.js
+: 1608978340:0;fg
+: 1608978464:0;npm install minecraft-data
+: 1608978475:0;npm install mineflayer-pathfinder
+: 1608978498:0;npm install mineflayer
+: 1608978572:0;node index.js
+: 1608978590:0;fg
+: 1608978718:0;npm i
+: 1608978723:0;fg
+: 1608978727:0;nvim
+: 1608978846:0;node index.js
+: 1608979501:0;fg
+: 1608979551:0;node index.js
+: 1608979571:0;fg
+: 1608979573:0;nvim
+: 1608979593:0;fg
+: 1608979631:0;nvim
+: 1608979637:0;node index.js
+: 1608979819:0;fg
+: 1608980110:0;node index.js
+: 1608980148:0;fg
+: 1608980686:0;node index.js
+: 1608980735:0;fg
+: 1608980744:0;node index.js
+: 1608981140:0;..
+: 1608981140:0;ls
+: 1608981160:0;mkdir realm-finder
+: 1608981162:0;cd realm-finder
+: 1608981163:0;ls
+: 1608981189:0;npm init
+: 1608981212:0;npm install mc-realms
+: 1608981219:0;nvim
+: 1608981230:0;touch index.js
+: 1608981231:0;fg
+: 1608981236:0;nvim
+: 1608981353:0;node index.js
+: 1608981362:0;fg
+: 1608981476:0;node index.js
+: 1608981484:0;fg
+: 1608981565:0;node index.js
+: 1608981572:0;fg
+: 1608981775:0;node index.js
+: 1608981790:0;fg
+: 1608981893:0;node index.js
+: 1608981898:0;fg
+: 1608981952:0;node index.js
+: 1608981960:0;fg
+: 1608982111:0;node index.js
+: 1608982716:0;..
+: 1608982717:0;ls
+: 1608982724:0;cd pathfinder-bot
+: 1608982725:0;fg
+: 1608982727:0;nvim
+: 1608982944:0;npm install prismarine-viewer
+: 1608983005:0;fg
+: 1608983408:0;..
+: 1608983408:0;ls
+: 1608983411:0;cd pathfinder-bot
+: 1608983417:0;node index.js
+: 1608983578:0;fg
+: 1608983606:0;node index.js
+: 1608985236:0;..
+: 1608985237:0;ls
+: 1608985239:0;cd realm-finder
+: 1608985242:0;node index.js
+: 1608985828:0;fg
+: 1608985829:0;nvim
+: 1608986287:0;node index.js
+: 1608986829:0;nvim
+: 1608986832:0;node index.js
+: 1608988034:0;fg
+: 1608988035:0;nvim
+: 1608988443:0;fg
+: 1608988615:0;node index.js
+: 1608989705:0;DEBUG="minecraft-protocol" node index.js
+: 1608992848:0;node index.js
+: 1608993120:0;DEBUG="minecraft-protocol" node index.js
+: 1608995377:0;node index.js
+: 1608995474:0;fg
+: 1608995572:0;node index.js
+: 1608995584:0;fg
+: 1608995598:0;node index.js
+: 1608995615:0;fg
+: 1608995668:0;node index.js
+: 1608995675:0;fg
+: 1608995683:0;node index.js
+: 1608995701:0;fg
+: 1608995732:0;node index.js
+: 1608995744:0;fg
+: 1608995753:0;node index.js
+: 1608995780:0;fg
+: 1608995804:0;node index.js
+: 1608995827:0;fg
+: 1608995838:0;node index.js
+: 1608995859:0;fg
+: 1608996374:0;DEBUG="minecraft-protocol" node index.js
+: 1609061546:0;node index.js
+: 1609061558:0;fg
+: 1609061669:0;node index.js
+: 1609061714:0;DEBUG="minecraft-protocol" node index.js
+: 1609062808:0;node index.js
+: 1610135739:0;cd
+: 1610135739:0;ls
+: 1610135741:0;cd Downloads
+: 1610135742:0;ls
+: 1610135750:0;java -Xmx1024M -Xms1024M -jar minecraft_server.1.16.4.jar
+: 1610135997:0;java -Xmx1024M -Xms1024M -jar minecraft_server.1.16.4.jar nogui
+: 1610136238:0;java -Xmx1024M -Xms1024M -jar minecraft_server.1.16.4.jar
+: 1610137414:0;java -Xmx1024M -Xms1024M -jar Roro\'s\ place\ \(World\ 1\).rar nogui
+: 1610215132:0;ls
+: 1610215135:0;cd
+: 1610215136:0;ls
+: 1610215138:0;cd code/roanmertens
+: 1610215139:0;ls
+: 1610215141:0;cd minecraft-bots
+: 1610215148:0;ls
+: 1610215153:0;cd realm-finder
+: 1610215160:0;ls
+: 1610215164:0;node index.js
+: 1612786107:0;brew install qmk/qmk/qmk
+: 1612792324:0;brew upgrade qmk/qmk/qmk
+: 1612792730:0;qmk setup
+: 1612792752:0;..
+: 1612792753:0;ls
+: 1612792755:0;..
+: 1612792756:0;ls
+: 1612792762:0;cd keyboards
+: 1612792766:0;mkdir keyboards
+: 1612792767:0;ls
+: 1612792770:0;cd keyboards
+: 1612792947:0;qmk compile -kb handwired/dactyl_manuform/5x6 -km default
+: 1612792972:0;ls
+: 1612793189:0;qmk new-keymap handwired/dactyl_manuform/5x6
+: 1612793200:0;qmk new-keymap -kb handwired/dactyl_manuform/5x6
+: 1612793245:0;cd /Users/roanm/qmk_firmware/keyboards/handwired/dactyl_manuform/5x6/keymaps/5x6_roan
+: 1612793246:0;ls
+: 1612793250:0;nvim
+: 1612799928:0;ls
+: 1612799930:0;..
+: 1612799930:0;ls
+: 1612799943:0;rm -rf 5x6_roan
+: 1612799944:0;ls
+: 1612799969:0;qmk new-keymap -kb handwired/dactyl_manuform/5x6_5
+: 1612799982:0;ls
+: 1612799993:0;..
+: 1612799994:0;ls
+: 1612799997:0;cd keymaps
+: 1612799998:0;ls
+: 1612800008:0;cd db_roan
+: 1612800026:0;cd /Users/roanm/qmk_firmware/keyboards/handwired/dactyl_manuform/5x6_5/keymaps/dm_roan
+: 1612800030:0;ls
+: 1612800035:0;nvim
+: 1612801991:0;ls
+: 1612801998:0;pwd
+: 1612802014:0;cd
+: 1612802015:0;ls
+: 1612802018:0;cd Downloads
+: 1612802019:0;ls
+: 1612802040:0;mv roros_layout.json /Users/roanm/qmk_firmware/keyboards/handwired/dactyl_manuform
+: 1612802045:0;..
+: 1612802046:0;ls
+: 1612802050:0;..
+: 1612802051:0;ls
+: 1612802054:0;..
+: 1612802055:0;ls
+: 1612802059:0;nvim
+: 1613213793:0;cd
+: 1613213794:0;ls
+: 1613213797:0;cd .config
+: 1613213797:0;ls
+: 1613213801:0;cd nvim
+: 1613213802:0;ls
+: 1613213804:0;gco master
+: 1613213806:0;gst
+: 1613213809:0;g reset --hard
+: 1613213812:0;gco main
+: 1613213814:0;gco master
+: 1613213817:0;g pull origin master
+: 1613213837:0;gst
+: 1613213839:0;nvim
+: 1613213906:0;ls
+: 1613213913:0;cd 5x6/keymaps/roan/keymap.c
+: 1613300160:0;qmk compile -kb handwired/dactyl_manuform/5x6 -km roan
+: 1613300360:0;qmk flash -kb handwired/dactyl_manuform/5x6 -km roan
+: 1613300648:0;qmk compile -kb handwired/dactyl_manuform/5x6 -km roan
+: 1613300656:0;qmk flash -kb handwired/dactyl_manuform/5x6 -km roan
+: 1613323586:0;fg
+: 1613323590:0;qmk compile -kb handwired/dactyl_manuform/5x6 -km roan
+: 1613323603:0;qmk flash -kb handwired/dactyl_manuform/5x6 -km roan
+: 1613904609:0;/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+: 1613904809:0;brew update\
+brew install openssl cmake
+: 1613904932:0;brew upgrade openssl
+: 1613905077:0;subkey generate
+: 1613905192:0;git clone -b v2.0.1 --depth 1 https://github.com/substrate-developer-hub/substrate-node-template\
+\
+
+: 1613905199:0;make init
+: 1613905211:0;cd
+: 1613905225:0;subkey generate
+: 1613905269:0;ls
+: 1613905273:0;cd code/roanmertens
+: 1613905273:0;ls
+: 1613905282:0;git clone -b v2.0.1 --depth 1 https://github.com/substrate-developer-hub/substrate-node-template
+: 1613905288:0;ls
+: 1613905291:0;cd substrate-node-template
+: 1613905292:0;ls
+: 1613905294:0;make init
+: 1613905321:0;curl -sSf https://static.rust-lang.org/rustup.sh
+: 1613905344:0;curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+: 1613905460:0;make init
+: 1613905477:0;rustup
+: 1613905513:0;make init
+: 1613905647:0;make build
+: 1613907960:0;git clone -b v2.0.1 --depth 1 https://github.com/substrate-developer-hub/substrate-front-end-template
+: 1613907969:0;cd substrate-front-end-template
+: 1613907975:0;yarn install
+: 1613908084:0;./target/release/node-template --dev --tmp
+: 1613908091:0;..
+: 1613908093:0;./target/release/node-template --dev --tmp
+: 1613908112:0;ls
+: 1613908120:0;cd substrate-front-end-template
+: 1613908121:0;yarn start
+: 1613908296:0;subkey
+: 1613908298:0;ls
+: 1613908300:0;..
+: 1613908304:0;ls
+: 1613908306:0;..
+: 1613908306:0;ls
+: 1613908309:0;cd substrate-node-template
+: 1613908310:0;ls
+: 1613908339:0;cargo build -p subkey --release
+: 1613908355:0;cargo build -p subkey
+: 1613908412:0;cargo install --force subkey --git https://github.com/paritytech/substrate --version 2.0.0 --locked
+: 1613910384:0;subkey generate
+: 1614350284:0;cd
+: 1614350285:0;ls
+: 1614350291:0;nvim .zshrc
+: 1615220668:0;ls
+: 1615220670:0;cd Downloads
+: 1615220671:0;ls
+: 1615220751:0;qmk flash -kb dz60 -km didi_pink.bin
+: 1615220958:0;dfu-programmer atmega32u4 erase --force
+: 1615220977:0;dfu-programmer atmega32u4 flash didi_pink.bin
+: 1615221069:0;dfu-programmer atmega32u4 flash dz60_layout_mine.hex
+: 1615713184:0;ls
+: 1615713186:0;cd code/roanmertens
+: 1615713187:0;ls
+: 1615713190:0;cd
+: 1615713192:0;cd code/roanmertens
+: 1615713193:0;ls
+: 1615713198:0;..
+: 1615713198:0;ls
+: 1615713201:0;cd roa
+: 1615713208:0;cd roanmertens
+: 1615713265:0;g clone git@github.com:lewagon/fullstack-challenges.git
+: 1615713319:0;gst
+: 1615713320:0;ls
+: 1615713323:0;cd fullstack-challenges
+: 1615713324:0;ls
+: 1615713329:0;nvim
+: 1615713369:0;ls
+: 1615713376:0;ls -a
+: 1615713387:0;rm -rf .git
+: 1615713389:0;gst
+: 1615713399:0;ls
+: 1615713401:0;ls -a
+: 1615713415:0;git init
+: 1615713476:0;gst
+: 1615713478:0;g add .
+: 1615713498:0;gst
+: 1615713500:0;git commit -m "first commit"
+: 1615713524:0;git branch -M main
+: 1615713530:0;git remote add origin git@github.com:RoanMertens/jaana-exercises.git\
+git push -u origin main
+: 1615713742:0;g push origin main
+: 1615719236:0;cd
+: 1615719240:0;nvim .zshrc
+: 1615719286:0;ls
+: 1615719287:0;ls -a
+: 1615719293:0;nvim
+: 1615719491:0;ls
+: 1615719493:0;cd .config
+: 1615719494:0;ls
+: 1615719497:0;cd nvim
+: 1615719499:0;nvim
+: 1615719519:0;cd
+: 1615719520:0;ls
+: 1615719524:0;ll -a
+: 1615719548:0;cd .oh-my-zsh
+: 1615719549:0;ls
+: 1615719553:0;..
+: 1615719554:0;ls
+: 1615719557:0;ls -a
+: 1615719565:0;nvim .profile
+: 1615719576:0;nvim .vimrc
+: 1615719586:0;nvim .zshenv
+: 1615719600:0;cd .config
+: 1615719602:0;ls
+: 1615719606:0;..
+: 1615719607:0;ls
+: 1615720090:0;ls -a
+: 1615720116:0;nvim .zshrc
+: 1615720174:0;vsc
+: 1615720205:0;code
+: 1615720209:0;..
+: 1615720211:0;code .
+: 1615720303:0;which
+: 1617442709:0;history
+: 1619686435:0;caffeinate
+: 1620029324:0;1396 + 138 + 579 + 97 + 170 + 150
+: 1622022180:0;ls
+: 1622022185:0;cd code/roanmertens
+: 1622022189:0;ls
+: 1622022211:0;mkdir test-project
+: 1622022214:0;cd test-project
+: 1622022217:0;git init
+: 1622022270:0;gem install bundler
+: 1622022484:0;ls
+: 1622022492:0;touch GEMFILE
+: 1622022510:0;nvim
+: 1622022581:0;touch readme.md
+: 1622022590:0;mv readme.md README.md
+: 1622022595:0;ls
+: 1622022615:0;ruby -v
+: 1622022623:0;rbenv install -list-all
+: 1622022643:0;rbenv versions
+: 1622022659:0;rbenv install -l
+: 1622022784:0;rbenv install 3.0.0
+: 1622023404:0;rbenv install 3.0.1
+: 1622023423:0;brew udate
+: 1622023429:0;brew upgrade
+: 1622024233:0;rbenv install 3.0.1
+: 1622029129:0;fg
+: 1622029148:0;nvim
+: 1622029290:0;bundle
+: 1622029303:0;rbenv global 3.0.1
+: 1622029306:0;bundle
+: 1622029331:0;fg
+: 1622029339:0;nvim
+: 1622029417:0;ls
+: 1622029440:0;touch .rubocop.yml
+: 1622029442:0;fg
+: 1622029443:0;nvim
+: 1622029684:0;bundle
+: 1622029703:0;rspec --init
+: 1622029708:0;rspec
+: 1622032576:0;fg
+: 1622032578:0;nvim
+: 1622065082:0;whoami
+: 1622065096:0;pyenv init
+: 1622065116:0;who
+: 1622065120:0;whoami
+: 1622112065:0;ps
+: 1622112174:0;pwd
+: 1622112255:0;id
+: 1622112267:0;host
+: 1622112272:0;hostname
+: 1622112302:0;ss
+: 1622112305:0;ps
+: 1622112316:0;env
+: 1622112362:0;help
+: 1622112370:0;env
+: 1622112374:0;help
+: 1622112378:0;help env
+: 1622112393:0;help internet
+: 1622112398:0;help session
+: 1622112402:0;help ip
+: 1622112445:0;man ip
+: 1622112450:0;help ip
+: 1622380597:0;pyenv init
+: 1625045218:0;cd
+: 1625045220:0;pyenv init
+: 1625045231:0;PATH
+: 1625045233:0;path
+: 1625045264:0;ls
+: 1625045276:0;cd code
+: 1625045277:0;ls
+: 1625045281:0;mkdir smart
+: 1625045282:0;ls
+: 1625045284:0;cd smart
+: 1625045305:0;git clone https://github.com/smartpension/api
+: 1625045511:0;cat ~/.ssh/id_ed25519.pub
+: 1625045517:0;history
+: 1625045544:0;ls
+: 1625045551:0;~
+: 1625045554:0;cd .ssh
+: 1625045555:0;ls
+: 1625045561:0;cat ~/.ssh/id_ed25519.pub
+: 1625045718:0;ssh-keygen -t ed25519 -C "roan.mertens@smartpension.co.uk"
+: 1625045747:0;ls
+: 1625050242:0;pyenv init
+: 1625050248:0;cd
+: 1625050249:0;ls
+: 1625050251:0;cd .conv
+: 1625050253:0;cd config
+: 1625050258:0;cd .config
+: 1625050259:0;ls
+: 1625050262:0;cd nvim
+: 1625050263:0;ls
+: 1625050266:0;gst
+: 1625050268:0;g diff
+: 1625050272:0;cd substrate-node-template
+: 1625050272:0;ls
+: 1625050277:0;..
+: 1625050278:0;ls
+: 1625050284:0;g stash
+: 1625050287:0;gst
+: 1625050290:0;g pull origin master
+: 1625050293:0;fg
+: 1625050294:0;nvim
+: 1625050352:0;g fetch
+: 1625050365:0;gco add-buffer-keybindings 
+: 1625050368:0;fg
+: 1625050369:0;nvim
+: 1625050557:0;gco replace-nerdtree-with-dirvish
+: 1625050559:0;fg
+: 1625050561:0;nvim
+: 1625050957:0;nvim init.vim
+: 1625051016:0;nvim
+: 1625051439:0;cd
+: 1625056367:0;pyenv init
+: 1625056374:0;ls
+: 1625056445:0;ls -a
+: 1625056458:0;nvim .profile
+: 1625056511:0;cd .zshrc
+: 1625056512:0;ls
+: 1625056519:0;cd .oh-my-zsh
+: 1625056519:0;ls
+: 1625056521:0;ls -a
+: 1625056546:0;..
+: 1625056549:0;ls -a
+: 1625056567:0;nvim .zshrc
+: 1625056656:0;pyenv
+: 1625056661:0;pyenv init
+: 1625057014:0;ls -a
+: 1625057028:0;touch .zprofile
+: 1625057032:0;nvim
+: 1625057047:0;pyenv init
+: 1625057049:0;pyenv init -
+: 1625057059:0;pyenv init
+: 1625057138:0;ls
+: 1625057148:0;cd .config
+: 1625057149:0;ls
+: 1625057151:0;cd nvim
+: 1625057152:0;nvim
+: 1625057256:0;bundle install pynvim
+: 1625057260:0;bundle
+: 1625057272:0;brew install pynvim
+: 1625057283:0;pyenv init
+: 1625057315:0;fg
+: 1625057415:0;pyenv install --list
+: 1625057445:0;pyenv install -v 2.7.18
+: 1625057689:0;pyenv install -v 3.9.5
+: 1625058115:0;ls
+: 1625058117:0;nvim
+: 1625058168:0;brew install pyenv pyenv-virtualenv readline xz
+: 1625058408:0;\
+pyenv virtualenv-init
+: 1625058412:0;\
+pyenv virtualenv-init -
+: 1625058424:0;nvim
+: 1625058749:0;gem install neovim`\
+`
+: 1625058764:0;fg
+: 1625058775:0;npm install -g neovim
+: 1625058900:0;fg
+: 1625060022:0;rbenv rehash
+: 1625060025:0;fg
+: 1625064004:0;nvim
+: 1627227787:0;diskutil list
+: 1627227873:0;diskutil unmountDisk /dev/disk2
+: 1627227880:0;diskutil list
+: 1628327896:0;cd
+: 1628327897:0;ls
+: 1628327899:0;cd code
+: 1628327900:0;ls
+: 1628327906:0;cd tech-tests
+: 1628327913:0;mkdir tech-tests
+: 1628327916:0;cd tech-tests
+: 1628327917:0;ls
+: 1628331835:0;ruby -v
+: 1628331870:0;..
+: 1628331871:0;ls
+: 1628331873:0;cd roanmertens
+: 1628331874:0;ls
+: 1628331876:0;..
+: 1628331877:0;ls
+: 1628331880:0;cd tech-tests
+: 1628331882:0;ls
+: 1628331889:0;mkdir service-area-postcode-checker
+: 1628331890:0;ls
+: 1628331892:0;cd service-area-postcode-checker
+: 1628331894:0;ls
+: 1628331914:0;gem install camping
+: 1628332600:0;touch run.rb
+: 1628332602:0;nvim
+: 1628332738:0;camping run.rb
+: 1628332779:0;fg
+: 1628332828:0;ls
+: 1628332833:0;camping run.rb
+: 1628332912:0;gem install WEBrick
+: 1628332952:0;gem install webrick
+: 1628332957:0;camping run.rb
+: 1628333092:0;bundle init
+: 1628333094:0;ls
+: 1628333096:0;nvim
+: 1628333099:0;fg
+: 1628333102:0;nvim
+: 1628333141:0;git init
+: 1628333145:0;gst
+: 1628333148:0;fg
+: 1628333149:0;nvim
+: 1628333194:0;ruby -v
+: 1628333207:0;rbenv versions
+: 1628333231:0;rbenv install --list
+: 1628333241:0;fg
+: 1628333307:0;history
+: 1628333314:0;fg
+: 1628333563:0;bundle
+: 1628333657:0;fg
+: 1628333927:0;bundle
+: 1628333935:0;camping run.rb
+: 1628333976:0;fg
+: 1628334023:0;camping run.rb
+: 1628334060:0;fg
+: 1628334125:0;bundle
+: 1628334157:0;fg
+: 1628334193:0;mkdir app
+: 1628334196:0;cd app
+: 1628334202:0;touch main.rb
+: 1628334228:0;ls
+: 1628334230:0;..
+: 1628334230:0;ls
+: 1628334260:0;fg
+: 1628334262:0;nvim
+: 1628334394:0;camping run.rb
+: 1628334408:0;fg
+: 1628334484:0;rubocop
+: 1628334495:0;fg
+: 1628334496:0;nvim
+: 1628334559:0;gst
+: 1628334561:0;nvim
+: 1628334565:0;rubocop
+: 1628334600:0;fg
+: 1628334601:0;nvim
+: 1628334613:0;touch .rubocop.yml
+: 1628334614:0;fg
+: 1628334748:0;bundle
+: 1628334750:0;rubocop
+: 1628334868:0;fg
+: 1628334876:0;rubocop
+: 1628334990:0;fg
+: 1628335113:0;rubocop
+: 1628335123:0;fg
+: 1628335134:0;rubocop
+: 1628335172:0;fg
+: 1628335204:0;rubocop
+: 1628335213:0;fg
+: 1628335295:0;ruby run.rb
+: 1628335303:0;camping run.rb
+: 1628335316:0;fg
+: 1628335362:0;camping run.rb
+: 1628335367:0;fg
+: 1628335511:0;camping run.rb
+: 1628335523:0;fg
+: 1628336400:0;camping run.rb
+: 1628336422:0;fg
+: 1628336434:0;camping run.rb
+: 1628336453:0;fg
+: 1628336501:0;camping run.rb
+: 1628336522:0;fg
+: 1628336597:0;camping run.rb
+: 1628336610:0;fg
+: 1628336621:0;camping run.rb
+: 1628336656:0;fg
+: 1628337421:0;ls
+: 1628337422:0;..
+: 1628337425:0;cd service-area-postcode-checker
+: 1628337428:0;camping run.rb
+: 1628350107:0;bundle
+: 1628350117:0;gem install pry
+: 1628350139:0;fg
+: 1628350163:0;camping run.rb
+: 1628352655:0;ls
+: 1628352660:0;cd app
+: 1628352664:0;mkdir adapters
+: 1628352687:0;ls
+: 1628352692:0;..
+: 1628352692:0;ls
+: 1628353022:0;fg
+: 1628353229:0;ls
+: 1628353232:0;cd app
+: 1628353233:0;ls
+: 1628353235:0;..
+: 1628353236:0;ls
+: 1628353255:0;mkdir settings
+: 1628353256:0;ls
+: 1628353259:0;cd settings
+: 1628353259:0;ls
+: 1628353367:0;touch postcode.json
+: 1628353381:0;mv postcode.json postcode.yml
+: 1628353382:0;ls
+: 1628353384:0;nvim
+: 1628371399:0;fg
+: 1628371401:0;nvim
+: 1628371912:0;ls
+: 1628371916:0;cd app/adapters
+: 1628371916:0;ls
+: 1628371974:0;mkdir postcodes_adapter fake_postcodes_adapter
+: 1628371976:0;ls
+: 1628408308:0;fg
+: 1628408357:0;bundle
+: 1628408361:0;fg
+: 1628409912:0;camping run.rb
+: 1628409949:0;..
+: 1628409950:0;ls
+: 1628409952:0;camping run.rb
+: 1628409975:0;..
+: 1628409976:0;camping run.rb
+: 1628412841:0;ls
+: 1628412844:0;camping run.rb
+: 1628412911:0;ls
+: 1628412916:0;camping run.rb
+: 1628412987:0;ls
+: 1628412991:0;..
+: 1628412994:0;ls
+: 1628412997:0;mkdir extra.rb
+: 1628412999:0;fg
+: 1628413018:0;ls
+: 1628413027:0;rm -rf extra.rb
+: 1628413031:0;touch extra.rb
+: 1628413032:0;fg
+: 1628413058:0;nvim
+: 1628413082:0;ls
+: 1628413086:0;camping run.rb
+: 1628414885:0;ls
+: 1628414886:0;..
+: 1628414887:0;ls
+: 1628414897:0;mv settings platform_settings
+: 1628414898:0;ls
+: 1628414901:0;cd platform_settings
+: 1628414901:0;ls
+: 1628414903:0;pwd
+: 1628414907:0;fg
+: 1628414980:0;camping run.rb
+: 1628420001:0;gst
+: 1628420003:0;g add .
+: 1628420009:0;g commit -m "First version"
+: 1628420025:0;gco -b spit_into_files
+: 1628420027:0;fg
+: 1628420029:0;ls
+: 1628420030:0;..
+: 1628420031:0;ls
+: 1628420033:0;cd app
+: 1628420035:0;ls
+: 1628420039:0;rm -rf extra.rb
+: 1628420040:0;ls
+: 1628420041:0;fg
+: 1628420182:0;ls
+: 1628420184:0;..
+: 1628420190:0;mv app/ lib/
+: 1628420192:0;ls
+: 1628420219:0;fg
+: 1628420239:0;nvim
+: 1628420254:0;camping run.rb
+: 1628420474:0;ls
+: 1628420476:0;cd lib
+: 1628420480:0;mkdir errors
+: 1628420482:0;ls
+: 1628420623:0;fg
+: 1628420658:0;bundle
+: 1628420662:0;rspec --init
+: 1628420696:0;fg
+: 1628420704:0;ls
+: 1628420722:0;rm -rf spec
+: 1628420723:0;ls
+: 1628420725:0;..
+: 1628420726:0;ls
+: 1628420730:0;rspec --init
+: 1628420736:0;cd lib
+: 1628420738:0;ls -a
+: 1628420742:0;rm -rf .rspec
+: 1628420744:0;ls
+: 1628420746:0;..
+: 1628420748:0;ls -a
+: 1628420751:0;fg
+: 1628420752:0;nvim
+: 1628421090:0;ls
+: 1628421100:0;touch spec/main_spec.rb
+: 1628421101:0;ls
+: 1628421115:0;cd lib
+: 1628421117:0;ls
+: 1628421118:0;..
+: 1628421119:0;nvim
+: 1628421398:0;rspec spec/main_spec.rb
+: 1628421405:0;fg
+: 1628421415:0;rspec spec/main_spec.rb
+: 1628421431:0;fg
+: 1628421457:0;rspec spec/main_spec.rb
+: 1628421501:0;fg
+: 1628421503:0;rspec spec/main_spec.rb
+: 1628421802:0;ls
+: 1628421804:0;cd lib
+: 1628421805:0;ls
+: 1628421812:0;mkdir units
+: 1628421815:0;cd units
+: 1628421821:0;fg
+: 1628421902:0;touch service_area_postcode_checker.rb
+: 1628421903:0;fg
+: 1628421979:0;ls
+: 1628421988:0;mkdir service_area_postcode_checker
+: 1628421992:0;cd service_area_postcode_checker
+: 1628421993:0;ls
+: 1628422004:0;touch entry_point.rb action.rb
+: 1628422005:0;ls
+: 1628422007:0;fg
+: 1628422024:0;ls
+: 1628422027:0;..
+: 1628422028:0;ls
+: 1628422033:0;rm -rf service_area_postcode_checker.rb
+: 1628422034:0;ls
+: 1628422037:0;cd service_area_postcode_checker
+: 1628422037:0;ls
+: 1628422038:0;fg
+: 1628422122:0;ls
+: 1628422127:0;touch inputs.rb
+: 1628422128:0;fg
+: 1628444644:0;gst
+: 1628444646:0;g stash
+: 1628444647:0;gst
+: 1628444650:0;g add .
+: 1628444652:0;g stash
+: 1628444655:0;ls
+: 1628444659:0;..
+: 1628444663:0;exit
+: 1628444665:0;cd
+: 1628444667:0;ls
+: 1628444670:0;cd code
+: 1628444671:0;ls
+: 1628444673:0;cd tech-tests
+: 1628444673:0;ls
+: 1628444675:0;cd service-area-postcode-checker
+: 1628444676:0;ls
+: 1628444681:0;fg
+: 1628444684:0;nvim
+: 1628445311:0;rspec spec/main_spec.rb
+: 1628445865:0;fg
+: 1628445909:0;bundle
+: 1628445913:0;fg
+: 1628445930:0;rspec spec/main_spec.rb
+: 1628445938:0;bundle
+: 1628445941:0;fg
+: 1628445960:0;rspec spec/main_spec.rb
+: 1628447613:0;fg
+: 1628447627:0;rspec spec/main_spec.rb
+: 1628447944:0;gem open camping
+: 1628447959:0;gem nvim camping
+: 1628447970:0;nvim gem camping
+: 1628448016:0;gem unpack camping
+: 1628448023:0;nvim /Users/roanm/code/tech-tests/service-area-postcode-checker/camping-2.1.532
+: 1628448199:0;fg
+: 1628448291:0;gem pack camping
+: 1628448299:0;camping run.rb
+: 1628448303:0;fg
+: 1628448529:0;nvim
+: 1628448604:0;rspec spec/main_spec.rb
+: 1628448886:0;camping run.rb
+: 1628448946:0;g stash list
+: 1628448950:0;gst
+: 1628448962:0;g diff
+: 1628448996:0;g add .rspec .rubocop.yml Gemfile Gemfile.lock lib run.rb spec
+: 1628448997:0;gst
+: 1628449010:0;g commit -m "add mockup test"
+: 1628449012:0;gst
+: 1628449014:0;g reset --hard
+: 1628449017:0;g stash apply
+: 1628449025:0;fg
+: 1628449068:0;camping run.rb
+: 1628449197:0;rspec spec/main_spec.rb
+: 1628451095:0;OA
+: 1628451096:0;rspec spec/main_spec.rb
+: 1628451161:0;OA
+: 1628451162:0;rspec spec/main_spec.rb
+: 1628452302:0;fg
+: 1628452379:0;rspec spec/main_spec.rb
+: 1628454142:0;camping run.rb
+: 1628454148:0;rspec spec/main_spec.rb
+: 1628454481:0;fg
+: 1628454588:0;irb
+: 1628455207:0;exit
+: 1628455250:0;ps -aux
+: 1628455303:0;kill -l
+: 1628455315:0;ps -ef | grep loopy
+: 1628455369:0;lsof -wni
+: 1628455381:0;ls
+: 1628455387:0;camping run.rb
+: 1628455392:0;lsof -wni tcp:3301
+: 1628455419:0;kill -9 48063 48063
+: 1628455423:0;camping run.rb
+: 1628455730:0;irb
+: 1628455824:0;ls
+: 1628455826:0;irb
+: 1628512309:0;fg
+: 1628512311:0;nvim
+: 1628512321:0;fg
+: 1628512496:0;nvim
+: 1628512564:0;rspec spec/main_spec.rb
+: 1628512566:0;fg
+: 1628512580:0;rspec spec/main_spec.rb
+: 1628512582:0;fg
+: 1628512589:0;rspec spec/main_spec.rb
+: 1628512591:0;fg
+: 1628512807:0;nvim
+: 1628512815:0;ls
+: 1628512822:0;rm -rf camping-2.1.532
+: 1628512823:0;ls
+: 1628512825:0;rspec spec/main_spec.rb
+: 1628512828:0;fg
+: 1628512863:0;ls
+: 1628512933:0;fg
+: 1628513811:0;camping run.rb
+: 1628518627:0;nvim
+: 1628518687:0;camping run.rb
+: 1628518705:0;fg
+: 1628518857:0;camping run.rb
+: 1628518877:0;fg
+: 1628518948:0;camping run.rb
+: 1628518954:0;fg
+: 1628519019:0;camping run.rb
+: 1628519035:0;fg
+: 1628519056:0;camping run.rb
+: 1628519089:0;fg
+: 1628519106:0;camping run.rb
+: 1628519117:0;fg
+: 1628519143:0;camping run.rb
+: 1628519152:0;fg
+: 1628519159:0;camping run.rb
+: 1628519178:0;fg
+: 1628519222:0;camping run.rb
+: 1628519247:0;fg
+: 1628519303:0;camping run.rb
+: 1628519309:0;fg
+: 1628519359:0;camping run.rb
+: 1628519382:0;fg
+: 1628519513:0;camping run.rb
+: 1628519648:0;fg
+: 1628519678:0;camping run.rb
+: 1628519689:0;fg
+: 1628519771:0;camping run.rb
+: 1628519787:0;fg
+: 1628522036:0;rubocop lib/main.rb
+: 1628522051:0;fg
+: 1628522096:0;rubocop lib/main.rb
+: 1628522101:0;fg
+: 1628522128:0;rubocop lib/main.rb
+: 1628522133:0;fg
+: 1628522144:0;rubocop lib/main.rb
+: 1628522148:0;fg
+: 1628523165:0;rubocop lib/main.rb
+: 1628523172:0;camping run.rb
+: 1628523228:0;fg
+: 1628523244:0;camping run.rb
+: 1628523313:0;fg
+: 1628523329:0;camping run.rb
+: 1628524187:0;fg
+: 1628524227:0;camping run.rb
+: 1628524257:0;fg
+: 1628524282:0;camping run.rb
+: 1628524297:0;fg
+: 1628524331:0;camping run.rb
+: 1628527302:0;rspec spec/main_spec.rb
+: 1628527316:0;fg
+: 1628527321:0;rubocop lib/main.rb
+: 1628527323:0;fg
+: 1628527404:0;camping run.rb
+: 1628527526:0;ls
+: 1628527539:0;mv lib/main.rb lib/controller.rb
+: 1628527545:0;touch lib/view.rb
+: 1628527546:0;fg
+: 1628527671:0;camping run.rb
+: 1628528120:0;ls
+: 1628528122:0;cd lib
+: 1628528122:0;ls
+: 1628528126:0;cd units
+: 1628528127:0;ls
+: 1628528139:0;fg
+: 1628528220:0;camping run.rb
+: 1628528239:0;fg
+: 1628528374:0;camping run.rb
+: 1628528866:0;ls
+: 1628528868:0;cd service_area_postcode_checker
+: 1628528869:0;ls
+: 1628528875:0;mv inputs.rb form.rb
+: 1628528875:0;fg
+: 1628535452:0;ls
+: 1628535454:0;..
+: 1628535454:0;ls
+: 1628535467:0;mv service_area_postcode_checker check_postcode_valid_for_service_area
+: 1628535469:0;ls
+: 1628535471:0;fg
+: 1628536088:0;ls
+: 1628536089:0;..
+: 1628536089:0;ls
+: 1628536102:0;touch errors/validation_error.rb
+: 1628536104:0;fg
+: 1628536791:0;ls
+: 1628536794:0;fg
+: 1628536990:0;ls
+: 1628536994:0;rm -rf adapters
+: 1628536996:0;fg
+: 1628537027:0;ls
+: 1628537030:0;la a
+: 1628537032:0;ls -a
+: 1628537035:0;..
+: 1628537036:0;ls -a
+: 1628537042:0;rm -rf .git
+: 1628537043:0;ls
+: 1628537045:0;fg
+: 1628537133:0;ls
+: 1628537140:0;mv platform_settings config
+: 1628537141:0;fg
+: 1628537167:0;touch config/errors.yml
+: 1628537168:0;fg
+: 1628539592:0;ls
+: 1628539604:0;cd lib/units/
+: 1628539605:0;ls
+: 1628539638:0;mkdir get_configurations
+: 1628539640:0;ls
+: 1628539643:0;..
+: 1628539644:0;ls
+: 1628539647:0;cd units
+: 1628539648:0;ls
+: 1628539660:0;rm -rf get_configurations
+: 1628539661:0;ls
+: 1628539677:0;mkdir get_configurations
+: 1628539678:0;ls
+: 1628539695:0;touch get_configurations/entry_point.rb get_configurations/action.rb
+: 1628539696:0;ls
+: 1628539698:0;fg
+: 1628540267:0;..
+: 1628540269:0;ls
+: 1628540284:0;mv config/postcode.yml config/allowed_postcodes.yml
+: 1628540297:0;touch config/allowed_lsoa_areas.yml
+: 1628540298:0;fg
+: 1628540335:0;mv config/allowed_lsoa_areas.yml config/allowed_lsoa_districts.yml
+: 1628540336:0;fg
+: 1628541925:0;camping run.rb
+: 1628578884:0;fg
+: 1628578928:0;rspec spec/main_spec.rb
+: 1628578936:0;rspec spec/controller_spec.rb
+: 1628578942:0;ls
+: 1628578944:0;cd spec
+: 1628578945:0;ls
+: 1628578972:0;mv main_spec.rb request_spec.rb
+: 1628578974:0;fg
+: 1628579012:0;rspec spec/request_spec.rb
+: 1628579660:0;nvim
+: 1628579943:0;rspec spec/request_spec.rb
+: 1628579964:0;ls
+: 1628579972:0;mkdir units errors
+: 1628579973:0;..
+: 1628579974:0;ls
+: 1628579976:0;cd lib
+: 1628579977:0;ls
+: 1628579988:0;fg
+: 1628580014:0;..
+: 1628580016:0;ls
+: 1628580023:0;touch README.MD
+: 1628580025:0;fg
+: 1628580261:0;rspec spec/request_spec.rb
+: 1628580299:0;ls
+: 1628580303:0;cd spec
+: 1628580304:0;ls
+: 1628580331:0;cp request_spec.rb errors/validation_error_spec.rb
+: 1628580332:0;fg
+: 1628581215:0;rspec spec/errors/validation_error_spec.rb
+: 1628581300:0;fg
+: 1628581313:0;rspec spec/errors/validation_error_spec.rb
+: 1628581655:0;ls
+: 1628581685:0;cd spec
+: 1628581696:0;ls
+: 1628581697:0;fg
+: 1628581733:0;cp errors/validation_error_spec.rb units/get_configurations/entry_point_spec.rb
+: 1628581744:0;mkdir units/get_configurations/
+: 1628581745:0;cp errors/validation_error_spec.rb units/get_configurations/entry_point_spec.rb
+: 1628581746:0;fg
+: 1628582299:0;rspec spec/units/
+: 1628582358:0;rspec /Users/roanm/code/tech-tests/service-area-postcode-checker/spec/errors/validation_error_spec.rb
+: 1628582373:0;rspec spec/errors/validation_error_spec.rb
+: 1628582386:0;..
+: 1628582387:0;rspec spec/errors/validation_error_spec.rb
+: 1628582409:0;rspec spec/units/
+: 1628582786:0;rspec
+: 1628582813:0;fg
+: 1628582815:0;ls
+: 1628582818:0;cd spec
+: 1628582818:0;ls
+: 1628582820:0;cd units
+: 1628582821:0;ls
+: 1628582850:0;mkdir check_postcode_valid_for_service_area
+: 1628582854:0;cd check_postcode_valid_for_service_area
+: 1628582854:0;ls
+: 1628582864:0;touch entry_point_spec.rb
+: 1628582867:0;ls
+: 1628582869:0;fg
+: 1628583540:0;rspec
+: 1628583543:0;cd
+: 1628583544:0;ls
+: 1628583554:0;cd code/
+: 1628583555:0;ls
+: 1628583560:0;cd tech-tests
+: 1628583561:0;ls
+: 1628583563:0;cd service-area-postcode-checker
+: 1628583563:0;ls
+: 1628583566:0;rspec
+: 1628583575:0;fg
+: 1628583679:0;rspec
+: 1628585916:0;camping run.rb
+: 1628594958:0;camping run
+: 1628594968:0;camping run.rb
+: 1628595099:0;localhost:3301
+: 1628595101:0;open localhost:3301
+: 1628595833:0;fg
+: 1628595834:0;nvim
+: 1628596348:0;ls
+: 1628596349:0;irb
+: 1628596695:0;ls
+: 1628596700:0;..
+: 1628596702:0;ls
+: 1628596738:0;cd spec
+: 1628596739:0;ls
+: 1628596754:0;touch end_to_end_spec.rb
+: 1628596755:0;fg
+: 1628598182:0;camping run.rb
+: 1628598185:0;irb
+: 1628598213:0;bundle
+: 1628598227:0;camping run.rb
+: 1628598229:0;irb
+: 1628598642:0;..
+: 1628598644:0;ls
+: 1628598646:0;cd tech
+: 1628598653:0;ls
+: 1628598654:0;cd service-area-postcode-checker
+: 1628598655:0;ls
+: 1628598659:0;camping run.rb
+: 1628598672:0;irb
+: 1628599160:0;fg
+: 1628599389:0;rspec end_to_end_spec.rb
+: 1628599400:0;rspec specs/end_to_end_spec.rb
+: 1628599410:0;rspec ./specs/end_to_end_spec.rb
+: 1628599415:0;rspec end_to_end_spec.rb
+: 1628599421:0;ls
+: 1628599423:0;rspec
+: 1628599434:0;fg
+: 1628599516:0;rspec end_to_end_spec.rb
+: 1628599520:0;rspec
+: 1628599542:0;fg
+: 1628599554:0;rspec
+: 1628599570:0;fg
+: 1628599619:0;rspec
+: 1628599627:0;fg
+: 1628599643:0;rspec
+: 1628599652:0;fg
+: 1628599667:0;rspec ./spec/end_to_end_spec.rb
+: 1628599670:0;fg
+: 1628599677:0;rspec ./spec/end_to_end_spec.rb
+: 1628599765:0;fg
+: 1628599776:0;rspec ./spec/end_to_end_spec.rb
+: 1628599795:0;fg
+: 1628599799:0;rspec ./spec/end_to_end_spec.rb
+: 1628599832:0;fg
+: 1628599839:0;ls
+: 1628599843:0;cd spec
+: 1628599844:0;ls
+: 1628599854:0;rspec ./end_to_end_spec.rb
+: 1628599917:0;fg
+: 1628599924:0;rspec ./end_to_end_spec.rb
+: 1628599936:0;fg
+: 1628599962:0;rspec ./end_to_end_spec.rb
+: 1628599966:0;fg
+: 1628600000:0;rspec ./end_to_end_spec.rb
+: 1628600051:0;fg
+: 1628600083:0;rspec ./end_to_end_spec.rb
+: 1628600155:0;camping run.rb
+: 1628600169:0;..
+: 1628600170:0;ls
+: 1628600172:0;camping run.rb
+: 1628600199:0;rspec ./spec/end_to_end_spec.rb
+: 1628600240:0;fg
+: 1628600265:0;rspec ./spec/end_to_end_spec.rb
+: 1628600273:0;fg
+: 1628600282:0;rspec ./spec/end_to_end_spec.rb
+: 1628600294:0;fg
+: 1628600453:0;cd spec
+: 1628600453:0;ls
+: 1628600459:0;rspec ./end_to_end_spec.rb
+: 1628600473:0;fg
+: 1628600481:0;rspec ./end_to_end_spec.rb
+: 1628600493:0;fg
+: 1628600518:0;rspec ./end_to_end_spec.rb
+: 1628600531:0;fg
+: 1628600539:0;rspec ./end_to_end_spec.rb
+: 1628600550:0;fg
+: 1628600562:0;rspec ./end_to_end_spec.rb
+: 1628600603:0;history
+: 1628600621:0;lsof -wni tcp:3301
+: 1628600648:0;kill -9 36563
+: 1628600655:0;lsof -wni tcp:3301
+: 1628600659:0;kill -9 36563
+: 1628600664:0;lsof -wni tcp:3301
+: 1628600674:0;kill -9 36573
+: 1628600856:0;rspec ./end_to_end_spec.rb
+: 1628600889:0;fg
+: 1628600971:0;rspec ./end_to_end_spec.rb
+: 1628600984:0;fg
+: 1628601002:0;rspec ./end_to_end_spec.rb
+: 1628601007:0;fg
+: 1628601014:0;rspec ./end_to_end_spec.rb
+: 1628601025:0;fg
+: 1628601118:0;rspec ./end_to_end_spec.rb
+: 1628601261:0;_name
+: 1628601263:0;rspec ./end_to_end_spec.rb
+: 1628601372:0;..
+: 1628601376:0;rspec .spec/end_to_end_spec.rb
+: 1628601396:0;rspec ./spec/end_to_end_spec.rb
+: 1628601404:0;fg
+: 1628601411:0;rspec ./spec/end_to_end_spec.rb
+: 1628601514:0;lsof -wni tcp:3301
+: 1628601525:0;kill -9 41262
+: 1628601526:0;lsof -wni tcp:3301
+: 1628601748:0;rspec ./spec/end_to_end_spec.rb
+: 1628601837:0;fg
+: 1628601850:0;rspec ./spec/end_to_end_spec.rb
+: 1628601871:0;fg
+: 1628601879:0;rspec ./spec/end_to_end_spec.rb
+: 1628601897:0;rspec
+: 1628601905:0;fg
+: 1628602103:0;rspec
+: 1628602107:0;fg
+: 1628602110:0;rspec
+: 1628602113:0;fg
+: 1628602117:0;rspec
+: 1628602120:0;fg
+: 1628602124:0;rspec
+: 1628602130:0;fg
+: 1628602139:0;lsof -wni tcp:3301
+: 1628602232:0;rspec
+: 1628602239:0;fg
+: 1628602246:0;rspec
+: 1628603392:0;cd spec
+: 1628603393:0;ls
+: 1628603397:0;rspec request_spec.rb
+: 1628603406:0;..
+: 1628603407:0;ls
+: 1628603417:0;rspec specs/end_to_end_spec.rb
+: 1628603421:0;rspec ./specs/end_to_end_spec.rb
+: 1628603426:0;rspec spec/end_to_end_spec.rb
+: 1628603431:0;rspec spec/
+: 1628603438:0;ls
+: 1628603474:0;fg
+: 1628603621:0;rubocop
+: 1628603627:0;fg
+: 1628603640:0;rubocop
+: 1628603655:0;fg
+: 1628603673:0;rubocop
+: 1628603675:0;fg
+: 1628603776:0;rubocop
+: 1628603779:0;rspec
+: 1628603784:0;fg
+: 1628603849:0;nvim
+: 1628606051:0;ls
+: 1628606052:0;nvim
+: 1628606055:0;fg
+: 1628606058:0;rubocop
+: 1628606066:0;rspec
+: 1628606072:0;bundle rspec
+: 1628606085:0;rspec
+: 1628606119:0;fg
+: 1628606121:0;nvim
+: 1628606295:0;rspec
+: 1628607714:0;fg
+: 1628608655:0;gst
+: 1628608657:0;git init
+: 1628608661:0;g add .
+: 1628608662:0;gst
+: 1628608670:0;g commit -m "save project"
+: 1628608734:0;git branch -M main
+: 1628608735:0;gs
+: 1628608747:0;gst
+: 1628608757:0;gb -D master
+: 1628608767:0;git remote add origin git@github.com:RoanMertens/SH24-tech-test.git
+: 1628608772:0;git push -u origin main
+: 1628608800:0;ls
+: 1628608802:0;ls -a
+: 1628608806:0;rm -rf .git
+: 1628608807:0;gst
+: 1628608810:0;ls
+: 1628613585:0;history
+: 1633640125:0;..
+: 1633640126:0;cd
+: 1633640126:0;ls
+: 1633640129:0;cd code
+: 1633640130:0;ls
+: 1633640135:0;mkdir golang
+: 1633640136:0;cd golang
+: 1633863779:0;go
+: 1633864120:0;go help
+: 1633864125:0;go doc
+: 1633864151:0;go env
+: 1633864188:0;go help test
+: 1633900510:0;ls
+: 1633900513:0;..
+: 1633900514:0;ls
+: 1633900516:0;cd roanmertens
+: 1633900519:0;mkdir golang
+: 1633900520:0;..
+: 1633900521:0;ls
+: 1633900524:0;rm -rf golang
+: 1633900526:0;cd roanmertens
+: 1633900527:0;ls
+: 1633900530:0;cd golang
+: 1633900533:0;..
+: 1633900534:0;ls
+: 1633900547:0;mv LVC-Website golang/LVC-Website
+: 1633900548:0;ls
+: 1633900570:0;mkdir ruby
+: 1633900589:0;mv golang/LVC-Website ruby/LVC-Website
+: 1633900599:0;mv fullstack-challenges ruby/fullstack-challenges
+: 1633900601:0;ls
+: 1633900611:0;mv basic-oauth-api ruby/basic-oauth-api
+: 1633900623:0;mv novel-api ruby/novel-api
+: 1633900632:0;mv test-project ruby/test-project
+: 1633900634:0;ls
+: 1633900654:0;mv novel-api-skeleton ruby/novel-api-skeleton
+: 1633900657:0;ls
+: 1633900661:0;cd golang
+: 1633900663:0;ls
+: 1633934246:0;mkdir test-project-1
+: 1633934248:0;cd test-project-1
+: 1633934256:0;mkdir pkg src
+: 1633934257:0;ls
+: 1633934271:0;mkdir bin
+: 1633934437:0;..
+: 1633934439:0;ls
+: 1633934440:0;..
+: 1633934441:0;ls
+: 1633934446:0;mv golang go
+: 1633934447:0;ls
+: 1633934449:0;cd go
+: 1633934450:0;ls
+: 1633934454:0;cd test-project-1
+: 1633934503:0;go env
+: 1633934612:0;ls
+: 1633934615:0;..
+: 1633934621:0;mkdir bin pkg src
+: 1633934624:0;rm -rf test-project-1
+: 1633934625:0;ls
+: 1633934630:0;cd src
+: 1633934631:0;ls
+: 1633934652:0;mkdir pluralsight-go-fundamentals-1
+: 1633934654:0;cd pluralsight-go-fundamentals-1
+: 1633934675:0;touch hell-world.go
+: 1633934680:0;ls
+: 1633934681:0;nvim
+: 1633935274:0;cd %GOPATH%
+: 1633935280:0;cd GOPATH
+: 1633935291:0;..
+: 1633935310:0;cd src/pluralsight-go-fundamentals-1
+: 1633935311:0;ls
+: 1633935314:0;ls -l
+: 1633935316:0;ll
+: 1633935328:0;go run hell-world.go
+: 1633935338:0;fg
+: 1633935359:0;go run hell-world.go
+: 1633935416:0;fg
+: 1633935439:0;ls
+: 1633935443:0;nvim
+: 1633935483:0;go run hell-world.go
+: 1633935487:0;fg
+: 1633935544:0;go run hell-world.go
+: 1633935551:0;fg
+: 1633947493:0;cd
+: 1633947494:0;ls
+: 1633947498:0;cd .config
+: 1633947499:0;ls
+: 1633947502:0;cd nvim
+: 1633947505:0;ls
+: 1633947506:0;gst
+: 1633947507:0;g diff
+: 1633947878:0;brew install chezmoi
+: 1633948193:0;chezmoi init https://github.com/roanmertens/dotfiles.git
+: 1633948266:0;yarn global add neovim
+: 1633948281:0;brew uninstall --ignore-dependencies node
+: 1633948287:0;brew uninstall --force node
+: 1633948297:0;brew install nvm
+: 1633948329:0;mkdir ~/.nvm
+: 1633948347:0;nvm
+: 1633948352:0;nvm install node nvm install 12.16.1
+: 1633949829:0;nvim
+: 1633949844:0;ls
+: 1633949848:0;..
+: 1633949849:0;ls
+: 1633949875:0;fg
+: 1633949876:0;nvim
+: 1633951724:0;ls
+: 1633955596:0;cd
+: 1633955597:0;ls
+: 1633955602:0;cd code/roanmertens/go
+: 1633955603:0;ls
+: 1633955608:0;go run hell-world.go
+: 1633955616:0;cd pkg
+: 1633955618:0;ls
+: 1633955620:0;..
+: 1633955623:0;cd src
+: 1633955623:0;ls
+: 1633955628:0;cd pluralsight-go-fundamentals-1
+: 1633955629:0;ls
+: 1633955634:0;go run hell-world.go
+: 1633955640:0;go help
+: 1633955664:0;go install hell-world.go
+: 1633955667:0;ls
+: 1633955669:0;..
+: 1633955669:0;ls
+: 1633955671:0;..
+: 1633955672:0;ls
+: 1633955675:0;cd bin
+: 1633955676:0;ls
+: 1633955680:0;..
+: 1633955680:0;ls
+: 1633955685:0;cd src
+: 1633955686:0;ls
+: 1633955687:0;..
+: 1633955688:0;ls
+: 1633955690:0;cd pkg
+: 1633955691:0;ls
+: 1633955692:0;..
+: 1633955695:0;cd src
+: 1633955701:0;ls
+: 1633955703:0;cd pluralsight-go-fundamentals-1
+: 1633955704:0;ls
+: 1633955714:0;go run hell-world.go
+: 1633955726:0;mv hell-world.go hello-world.go
+: 1633955730:0;go run hello-world.go
+: 1633962709:0;ls
+: 1633962710:0;..
+: 1633962711:0;ls
+: 1633962718:0;cd pluralsight-go-fundamentals-1
+: 1633962719:0;ls
+: 1633962759:0;..
+: 1633962761:0;ls
+: 1633962764:0;..
+: 1633962764:0;ls
+: 1633962777:0;cd src/pluralsight-go-fundamentals-1
+: 1633962777:0;ls
+: 1633962795:0;g run variables.go
+: 1633962804:0;go run variables.go
+: 1633962855:0;g run variables.go
+: 1633962859:0;go run variables.go
+: 1633963878:0;go run calcs.go
+: 1633964947:0;go run src/pluralsight-go-fundamentals-1/variables-shorthand.go
+: 1633964952:0;go run variables-shorthand.go
+: 1633965854:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/variables-change-values.go
+: 1633967318:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/notes.go
+: 1634040036:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/review.go
+: 1634042671:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/passing-reference.go
+: 1634049904:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/env-vars.go
+: 1634050372:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/notes.go
+: 1634050380:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/env-vars.go
+: 1634050413:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/notes.go
+: 1634110291:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/func.go
+: 1634128804:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/variadic.go
+: 1634138605:0;ls
+: 1634138616:0;cd src
+: 1634138616:0;ls
+: 1634138619:0;cd pluralsight-go-fundamentals-1
+: 1634138621:0;ls
+: 1634139254:0;/Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/if.go
+: 1634139257:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/if.go
+: 1634140530:0;go run /Users/roanm/code/roanmertens/go/src/pluralsight-go-fundamentals-1/if-test.go
+: 1634220578:0;cd
+: 1634220579:0;ls
+: 1634220588:0;cd .config
+: 1634220591:0;ls
+: 1634220593:0;cd nvim
+: 1634220596:0;gst
+: 1634220599:0;g reset --hard
+: 1634220603:0;gco main
+: 1634220606:0;gco master
+: 1634220610:0;g pull origin master
+: 1634220623:0;gco -b golang-only
+: 1634220626:0;ls
+: 1634220630:0;nvim
+: 1634220649:0;gco master
+: 1634220663:0;gco replace-nerdtree-with-dirvish 
+: 1634220676:0;fg
+: 1634220678:0;nvim
+: 1634220697:0;gb -D golang
+: 1634220703:0;gco -b golang
+: 1634220708:0;gb -D golang-only 
+: 1634220714:0;nvim
+: 1634224355:0;ls
+: 1634224358:0;nvim
+: 1634224603:0;cd
+: 1634224604:0;ls
+: 1634224607:0;cd code/roanmertens
+: 1634224608:0;ls
+: 1634224612:0;cd ruby
+: 1634224612:0;ls
+: 1634224615:0;cd fullstack-challenges
+: 1634224616:0;ls
+: 1634224621:0;cd 01-Ruby
+: 1634224622:0;ls
+: 1634224624:0;nvim
+: 1634224703:0;cd
+: 1634224709:0;ruby -v
+: 1634224712:0;rbenv -v
+: 1634224715:0;rbenv versions
+: 1634224722:0;rbenv install --list
+: 1634224729:0;rbenv install 3.0.2
+: 1634224742:0;rbenv install --list
+: 1634224748:0;rbenv install
+: 1634224759:0;rbenv 
+: 1634224764:0;rbenv version
+: 1634224769:0;rbenv versions
+: 1634224774:0;rbenv which
+: 1634224779:0;ls
+: 1634224788:0;gem install solargraph
+: 1634224910:0;pyenv versions
+: 1634224941:0;brew update
+: 1634224964:0;brew upgrade
+: 1634225205:0;cd /usr/local/Cellar/pyenv/2.0.2/libexec/pyenv
+: 1634225208:0;cd usr/
+: 1634225211:0;ls
+: 1634225212:0;..
+: 1634225213:0;ls
+: 1634225214:0;..
+: 1634225214:0;ls
+: 1634225219:0;cd /usr/local/Cellar/pyenv/2.0.2/libexec/pyenv
+: 1634225225:0;/usr/local/Cellar/pyenv/2.0.2/
+: 1634225226:0;ls
+: 1634225234:0;cd libexec/
+: 1634225235:0;ls
+: 1634225244:0;nvim
+: 1634225933:0;cd code/roanmertens/ruby/
+: 1634225933:0;ls
+: 1634225939:0;cd novel-api-skeleton
+: 1634225939:0;ls
+: 1634225941:0;nvim
+: 1634225954:0;ls
+: 1634225954:0;..
+: 1634225955:0;ls
+: 1634225963:0;cd test-project
+: 1634225964:0;ls
+: 1634225968:0;nvim
+: 1634226237:0;fg
+: 1634226238:0;nvim
+: 1634226415:0;cd /Users/roanm/.venv/bin/
+: 1634226425:0;cd .venv/bin/
+: 1634226427:0;ls
+: 1634226428:0;..
+: 1634226429:0;ls
+: 1634226433:0;cd
+: 1634226436:0;cd /Users/roanm/.venv/bin/python2
+: 1634226440:0;cd ../Users/roanm/.venv/bin/python2
+: 1634226441:0;ls
+: 1634226444:0;cd ..
+: 1634226454:0;cd roanm/.venv/
+: 1634226455:0;ls
+: 1634226459:0;cd roanm
+: 1634226459:0;ls
+: 1634226462:0;ls -a
+: 1634226468:0;cd .pyenv
+: 1634226469:0;ls
+: 1634226472:0;cd versions
+: 1634226474:0;ls
+: 1634226551:0;nvim
+: 1634226571:0;ls
+: 1634226572:0;..
+: 1634226573:0;ls
+: 1634226577:0;cd shims
+: 1634226577:0;ls
+: 1634226654:0;nvim
+: 1634226711:0;/Users/roanm/.pyenv/shims/python3.9 -m pip install pynvim
+: 1634226724:0;/Users/roanm/.pyenv/shims/python2.7 -m pip install pynvim
+: 1634226732:0;/Users/roanm/.pyenv/shims/python2.7 -m pip update pynvim
+: 1634226736:0;/Users/roanm/.pyenv/shims/python2.7 -m pip upgrade pynvim
+: 1634226775:0;/Users/roanm/.pyenv/shims/python2.7 -m pip install --upgrade pynvim
+: 1634226785:0;nvim
+: 1634226812:0;gem update neovim
+: 1634226899:0;cpanm -n Neovim::Ext
+: 1634226907:0;cpan -n Neovim::Ext
+: 1634226916:0;cd
+: 1634226924:0;cpanm -n Neovim::Ext
+: 1634227015:0;brew install cpanminus
+: 1634227030:0;cpanm -n Neovim::Ext
+: 1634227047:0;nvim
+: 1634227465:0;cpanm -n App::cpanminus
+: 1634227475:0;nvim
+: 1634227657:0;cd code/roanmertens/ruby/
+: 1634227658:0;ls
+: 1634227667:0;cd LVC-Website
+: 1634227668:0;ls
+: 1634227670:0;nvim
+: 1634227908:0;solargraph bundle
+: 1634227915:0;ls
+: 1634227917:0;gst
+: 1634228314:0;nvim
+: 1634228566:0;fg
+: 1634228567:0;nvim
+: 1634228641:0;go get golang.org/x/tools/gopls@latest
+: 1634228676:0;go install gopls
+: 1634228685:0;go install gopls@latest
+: 1634228989:0;cd
+: 1634228993:0;ls
+: 1634228998:0;cd code/roanmertens/go
+: 1634228998:0;ls
+: 1634229006:0;cd src
+: 1634229006:0;ls
+: 1634229086:0;cd pluralsight-go-fundamentals-1
+: 1634229087:0;ls
+: 1634229090:0;nvim
+: 1634229825:0;go install golang.org/x/tools/gopls@latest
+: 1634229947:0;nvim
+: 1634230627:0;gst
+: 1634230628:0;nvim
+: 1634230656:0;fg
+: 1634230658:0;nvim
+: 1634297626:0;cd
+: 1634297629:0;cd .config
+: 1634297630:0;ls
+: 1634297635:0;cd nvim
+: 1634297636:0;ls
+: 1634297637:0;nvim
+: 1634297988:0;brew install ripgrep
+: 1634298043:0;fg
+: 1634298290:0;nvim
+: 1634298673:0;fg
+: 1634299391:0;nvim
+: 1634300032:0;cd
+: 1634300034:0;cd code/roanmertens/go
+: 1634300035:0;ls
+: 1634300037:0;cd src
+: 1634300037:0;ls
+: 1634300039:0;cd pluralsight-go-fundamentals-1
+: 1634300040:0;ls
+: 1634300041:0;nvim
+: 1634308267:0;cd
+: 1634308269:0;cd Downloads
+: 1634308270:0;ls
+: 1634308271:0;nvim
+: 1634310589:0;ls
+: 1634310591:0;nvim calcs.go
+: 1634311626:0;echo $VIMRUNTIME
+: 1634311631:0;echo $VIM
+: 1634332694:0;nvim calcs.go
+: 1634332789:0;go mod init
+: 1634332803:0;go mid init test
+: 1634332809:0;ls
+: 1634332917:0;go mid init example/notes
+: 1634332924:0;go mod init example/notes
+: 1634332933:0;go mod tidy
+: 1634332937:0;fg
+: 1634546166:0;nvim
+: 1634552050:0;ls
+: 1634552058:0;git init
+: 1634552061:0;nvim
+: 1634552881:0;go version
+: 1634552919:0;..
+: 1634552920:0;ls
+: 1634552921:0;..
+: 1634552922:0;ls
+: 1634552953:0;cd src
+: 1634552953:0;ls
+: 1634552955:0;cd pluralsight-go-fundamentals-1
+: 1634552963:0;touch go.mod
+: 1634552965:0;fg
+: 1634552984:0;nvim
+: 1634553675:0;cd
+: 1634553676:0;ls
+: 1634553678:0;cd .convig
+: 1634553681:0;cd .config
+: 1634553925:0;ls
+: 1634553929:0;fg
+: 1634553938:0;mkdir startup
+: 1634553940:0;ls
+: 1634553943:0;cd startup
+: 1634553945:0;fg
+: 1634553955:0;touch theme.vim
+: 1634553955:0;fg
+: 1634553969:0;touch navigation.vim
+: 1634553969:0;fg
+: 1634553985:0;touch quality_of_life.vim version_control.vim
+: 1634553986:0;ls
+: 1634553988:0;fg
+: 1634554003:0;touch languages.vim
+: 1634554004:0;fg
+: 1634554010:0;touch keymapping.vim
+: 1634554084:0;fg
+: 1634554268:0;touch settings.vim
+: 1634554269:0;fg
+: 1634554570:0;ls
+: 1634554573:0;rm -rf version_control.vim
+: 1634554574:0;fg
+: 1634554921:0;touch lsp.vim
+: 1634554923:0;fg
+: 1634555757:0;rm -rf keymapping.vim
+: 1634555758:0;ls
+: 1634555763:0;nvim
+: 1634555801:0;fg
+: 1634557287:0;nvim
+: 1634561148:0;..
+: 1634561149:0;ls
+: 1634561150:0;nvim
+: 1634572018:0;ls
+: 1634572024:0;touch switch.go
+: 1634572025:0;fg
+: 1634572389:0;go run switch.go
+: 1634572391:0;fg
+: 1634572401:0;go run switch.go
+: 1634572403:0;fg
+: 1634573153:0;touch break-and-fall-trough.go
+: 1634573154:0;fg
+: 1634628048:0;go run break-and-fall-trough.go
+: 1634628052:0;fg
+: 1634628063:0;go run break-and-fall-trough.go
+: 1634628070:0;fg
+: 1634628087:0;go run break-and-fall-trough.go
+: 1634628163:0;touch switch-lottery.go
+: 1634628163:0;fg
+: 1634628389:0;go run switch-lottery.go
+: 1634628391:0;fg
+: 1634628753:0;go run switch-lottery.go
+: 1634628761:0;fg
+: 1634628779:0;go run switch-lottery.go
+: 1634628788:0;fg
+: 1634628928:0;go run switch-lottery.go
+: 1634628933:0;fg
+: 1634628992:0;go run switch-lottery.go
+: 1634629018:0;fg
+: 1634629102:0;go run switch-lottery.go
+: 1634629104:0;fg
+: 1634629119:0;go run switch-lottery.go
+: 1634629126:0;fg
+: 1634642631:0;ls
+: 1634642639:0;cd
+: 1634642643:0;cd code/roanmertens/go
+: 1634642644:0;ls
+: 1634642646:0;cd src
+: 1634642647:0;ls
+: 1634642649:0;cd pluralsight-go-fundamentals-1
+: 1634642650:0;ls
+: 1634642658:0;touch go-error.go
+: 1634642660:0;fg
+: 1634642661:0;nvim
+: 1634642800:0;go run go-error.go
+: 1634642805:0;fg
+: 1634909860:0;ls
+: 1634909862:0;gst
+: 1634909865:0;g diff
+: 1634909870:0;ls
+: 1634909873:0;gst
+: 1634909877:0;g add .
+: 1634909880:0;gst
+: 1634909908:0;g commit -m "go and ruby nvim setup without lsp"
+: 1634909916:0;g push origin golang
+: 1635263945:0;cd
+: 1635263946:0;ls
+: 1635263948:0;cd code
+: 1635263949:0;ls
+: 1635263950:0;cd roanmertens
+: 1635263951:0;ls
+: 1635263954:0;cd keyboards
+: 1635263955:0;ls
+: 1635263960:0;ls -a
+: 1635263962:0;..
+: 1635263963:0;ls
+: 1635263967:0;cd keyboards
+: 1635263980:0;git init
+: 1635263999:0;git commit --empty
+: 1635264023:0;git commit --allow-empty
+: 1635264039:0;git commit --allow-empty -m "First commit"
+: 1635264041:0;gst
+: 1635264047:0;git branch -M main
+: 1635264054:0;git remote add origin git@github.com:RoanMertens/keymaps.git
+: 1635264058:0;git push -u origin main
+: 1635264065:0;ls
+: 1635264080:0;mkdir ortho60
+: 1635264108:0;mkdir gergoplex
+: 1635264351:0;history
+: 1635264622:0;ls
+: 1635264640:0;mkdir dz60-rev3
+: 1635264641:0;cd dz60-rev3
+: 1635264660:0;touch dz60-test.json
+: 1635264663:0;nvim
+: 1635264821:0;fg
+: 1635264822:0;nvim
+: 1635268065:0;ls
+: 1635268067:0;..
+: 1635268068:0;ls
+: 1635268076:0;cd gergoplex
+: 1635268123:0;touch .gitkeep
+: 1635268124:0;..
+: 1635268125:0;ls
+: 1635268126:0;gst
+: 1635268128:0;g add .
+: 1635268142:0;g commit -m "add v1 keymaps\
+"
+: 1635268147:0;g push origin main
+: 1635268150:0;gst
+: 1635345865:0;chezmoi diff
+: 1635346059:0;chezmoi add .config/nvim/init.vim
+: 1635346072:0;chezmoi add ~/.config/nvim/init.vim
+: 1635346075:0;chezmoi diff
+: 1635346142:0;chezmoi -v apply
+: 1635346145:0;cd
+: 1635346146:0;ls
+: 1635346152:0;cd code/roanmertens/go
+: 1635346153:0;ls
+: 1635346156:0;nvim
+: 1635346172:0;cd
+: 1635346174:0;cd .conv
+: 1635346177:0;cd .config
+: 1635346178:0;ls
+: 1635346182:0;cd nvim
+: 1635346183:0;ls
+: 1635346184:0;nvim
+: 1635346300:0;chezmoi diff
+: 1635349477:0;ls -a
+: 1635349477:0;nvim .zshrc
+: 1635349477:0;fg
+: 1635346602:0;nvim .zshrc
+: 1635349477:0;fg
+: 1635349477:0;vim .zshrc
+: 1635349477:0;chezmoi -v apply
+: 1635349477:0;fg
+: 1635349477:0;nvim
+: 1635349477:0;nvim .zshrc
+: 1635346698:0;$USER
+: 1635346716:0;$UID
+: 1635346753:0;ls
+: 1635346759:0;chezmoi diff
+: 1635346777:0;chezmoi help
+: 1635346846:0;chezmoi merge
+: 1635346852:0;chezmoi merge-all
+: 1635346889:0;chezmoi diff
+: 1635346899:0;nvim .zshrc
+: 1635346905:0;chezmoi diff
+: 1635346972:0;chezmoi merge .zshrc
+: 1635347007:0;chezmoi diff
+: 1635347099:0;chezmoi help
+: 1635347110:0;chezmoi c
+: 1635347114:0;chezmoi cd
+: 1635347117:0;gst
+: 1635347119:0;g diff
+: 1635347126:0;g diff dot_zshrc
+: 1635347142:0;g diff
+: 1635347205:0;cd
+: 1635347207:0;ls
+: 1635347210:0;cd .config
+: 1635347211:0;ls
+: 1635347212:0;cd nivm
+: 1635347214:0;cd nvim
+: 1635347215:0;ls
+: 1635347222:0;cd startup
+: 1635347222:0;ls
+: 1635347224:0;..
+: 1635347232:0;chezmoi help
+: 1635347243:0;ll
+: 1635347256:0;chezmoi add ~/.config/nvim/startup
+: 1635347260:0;chezmoi diff
+: 1635347263:0;chezmoi cd
+: 1635347266:0;gst
+: 1635347284:0;gco -b home_mace
+: 1635347287:0;gst
+: 1635347295:0;g add .
+: 1635347315:0;g commit -m "clean up vim filestructure"
+: 1635347356:0;git branch -m home_mace home_mac
+: 1635347413:0;g push origin home_mac 
+: 1635347928:0;cd
+: 1635347932:0;ls -a
+: 1635347937:0;cd .ssh
+: 1635347937:0;ls
+: 1635347944:0;nvim
+: 1635348012:0;nvim .ssh
+: 1635348015:0;nvim
+: 1635348290:0;cd
+: 1635348290:0;ls
+: 1635348294:0;cd code/roanmertens/go
+: 1635348295:0;ls
+: 1635348297:0;cd src
+: 1635348298:0;nvim
+: 1635348303:0;ls
+: 1635348304:0;..
+: 1635348304:0;ls
+: 1635348312:0;git init
+: 1635348315:0;g diff
+: 1635348318:0;g add .
+: 1635348318:0;gst
+: 1635348324:0;g add .
+: 1635348326:0;gst
+: 1635348331:0;ls
+: 1635348335:0;g add src/
+: 1635348344:0;ls -a
+: 1635348348:0;rm -rf .git
+: 1635348350:0;cd src
+: 1635348353:0;ls
+: 1635348355:0;cd pluralsight-go-fundamentals-1
+: 1635348357:0;gst
+: 1635348359:0;g diff
+: 1635348360:0;g add .
+: 1635348368:0;g commit -m "add go exercises"
+: 1635348370:0;gst
+: 1635348390:0;git remote -v
+: 1635348392:0;git remote
+: 1635348398:0;git remote help
+: 1635348406:0;git remote -v
+: 1635348466:0;git branch -M main
+: 1635348475:0;git remote add origin git@github.com:RoanMertens/exercises-pluralsight-go-fundamentals-1.git
+: 1635348482:0;git push -u origin main
+: 1635348497:0;cd
+: 1635348500:0;chezmoi cd
+: 1635348505:0;git remote -v
+: 1635348514:0;g push origin home_mac
+: 1635348553:0;git remote help
+: 1635348588:0;git remote -v
+: 1635348614:0;git remote set-url git@github.com:RoanMertens/dotfiles.git
+: 1635348629:0;git remote rename git@github.com:RoanMertens/dotfiles.git
+: 1635348642:0;git remote remove origin
+: 1635348645:0;git remove -v
+: 1635348650:0;git remote -v
+: 1635348665:0;git remote add origin git@github.com:RoanMertens/dotfiles.git
+: 1635348668:0;g push origin home_mac
+: 1635349119:0;cd
+: 1635349123:0;nvim .zshrc
+: 1635349477:0;ls -a
+: 1635349526:0;nvim .zsh_history
+: 1635349564:0;chezmoi diff
+: 1635349591:0;chezmoi add .zsh_history
+: 1635349600:0;chezmoi cd
+: 1635349609:0;chezmoi dif
+: 1635349612:0;chezmoi diff
+: 1635349627:0;chezmoi merge-all
+: 1635349679:0;chezmoi diff
+: 1635349685:0;chezmoi merge-all
